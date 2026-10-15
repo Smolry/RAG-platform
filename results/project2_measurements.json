@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-13T14:30:10.110430+00:00",
+  "embedder": "sentence-transformers",
+  "qdrant_url": "http://localhost:6333",
+  "n_queries": 200,
+  "search_ms_no_filter": {
+    "p50": 7.6410999754443765,
+    "p95": 22.774990124162287
+  },
+  "search_ms_acl_filter": {
+    "p50": 9.45184996817261,
+    "p95": 29.71620993921534
+  },
+  "filter_overhead_ms": {
+    "p50": 1.8107499927282333,
+    "p95": 6.941219815053053,
+    "mean": 3.6710169923026115
+  },
+  "revoke_trials": 20,
+  "revoke_update_ms": {
+    "p50": 14.066800009459257,
+    "max": 320.17949991859496
+  },
+  "revoke_to_effective_ms": {
+    "p50": 41.538049932569265,
+    "max": 343.3139000553638
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-10-14T23:38:21.799974+00:00",
+  "embedder_backend": "sentence-transformers",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "n_paraphrase": 50,
+  "n_near_miss": 50,
+  "NOT_FOR_REPORTING": false,
+  "selection_rule": "NO threshold in the sweep has zero false hits; picked fewest false hits - treat as UNSAFE and investigate",
+  "chosen": {
+    "threshold": 0.92,
+    "false_hits": 3,
+    "false_hit_rate": 0.06,
+    "false_misses": 22,
+    "false_miss_rate": 0.44,
+    "hit_rate_on_paraphrases": 0.56
+  },
+  "paraphrase_sim_min_median_max": [
+    0.5422590331652494,
+    0.9254163231324689,
+    0.971496892881438
+  ],
+  "hardest_near_misses": [
+    {
+      "sim": 1.0,
+      "q1": "What is a B-tree?",
+      "q2": "What is a B+ tree?"
+    },
+    {
+      "sim": 0.9924,
+      "q1": "Is Raft easier to understand than Paxos?",
+      "q2": "Is Paxos easier to understand than Raft?"
+    },
+    {
+      "sim": 0.9897,
+      "q1": "Does Kafka guarantee ordering within a partition?",
+      "q2": "Does Kafka guarantee ordering across partitions?"
+    },
+    {
+      "sim": 0.9167,
+      "q1": "What are the advantages of microservices?",
+      "q2": "What are the disadvantages of microservices?"
+    },
+    {
+      "sim": 0.896,
+      "q1": "What is the first version of Git?",
+      "q2": "What is the latest version of Git?"
+    }
+  ],
+  "sweep": [
+    {
+      "threshold": 0.85,
+      "false_hits": 7,
+      "false_hit_rate": 0.14,
+      "false_misses": 8,
+      "false_miss_rate": 0.16,
+      "hit_rate_on_paraphrases": 0.84
+    },
+    {
+      "threshold": 0.86,
+      "false_hits": 7,
+      "false_hit_rate": 0.14,
+      "false_misses": 8,
+      "false_miss_rate": 0.16,
+      "hit_rate_on_paraphrases": 0.84
+    },
+    {
+      "threshold": 0.87,
+      "false_hits": 7,
+      "false_hit_rate": 0.14,
+      "false_misses": 9,
+      "false_miss_rate": 0.18,
+      "hit_rate_on_paraphrases": 0.8200000000000001
+    },
+    {
+      "threshold": 0.88,
+      "false_hits": 7,
+      "false_hit_rate": 0.14,
+      "false_misses": 10,
+      "false_miss_rate": 0.2,
+      "hit_rate_on_paraphrases": 0.8
+    },
+    {
+      "threshold": 0.89,
+      "false_hits": 7,
+      "false_hit_rate": 0.14,
+      "false_misses": 12,
+      "false_miss_rate": 0.24,
+      "hit_rate_on_paraphrases": 0.76
+    },
+    {
+      "threshold": 0.9,
+      "false_hits": 4,
+      "false_hit_rate": 0.08,
+      "false_misses": 13,
+      "false_miss_rate": 0.26,
+      "hit_rate_on_paraphrases": 0.74
+    },
+    {
+      "threshold": 0.91,
+      "false_hits": 4,
+      "false_hit_rate": 0.08,
+      "false_misses": 17,
+      "false_miss_rate": 0.34,
+      "hit_rate_on_paraphrases": 0.6599999999999999
+    },
+    {
+      "threshold": 0.92,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 22,
+      "false_miss_rate": 0.44,
+      "hit_rate_on_paraphrases": 0.56
+    },
+    {
+      "threshold": 0.93,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 27,
+      "false_miss_rate": 0.54,
+      "hit_rate_on_paraphrases": 0.45999999999999996
+    },
+    {
+      "threshold": 0.94,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 30,
+      "false_miss_rate": 0.6,
+      "hit_rate_on_paraphrases": 0.4
+    },
+    {
+      "threshold": 0.95,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 33,
+      "false_miss_rate": 0.66,
+      "hit_rate_on_paraphrases": 0.33999999999999997
+    },
+    {
+      "threshold": 0.96,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 42,
+      "false_miss_rate": 0.84,
+      "hit_rate_on_paraphrases": 0.16000000000000003
+    },
+    {
+      "threshold": 0.97,
+      "false_hits": 3,
+      "false_hit_rate": 0.06,
+      "false_misses": 48,
+      "false_miss_rate": 0.96,
+      "hit_rate_on_paraphrases": 0.040000000000000036
+    }
+  ]
+}

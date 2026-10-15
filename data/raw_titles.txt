@@ -1,0 +1,101 @@
+# Edit freely. Coherent domain = better eval questions. ~100 titles on data/ML infrastructure.
+Apache Kafka
+Apache Spark
+Apache Hadoop
+PostgreSQL
+MongoDB
+Redis
+SQLite
+Elasticsearch
+Docker (software)
+Kubernetes
+Git
+Linux
+TCP/IP model
+Domain Name System
+Transport Layer Security
+OAuth
+JSON Web Token
+Role-based access control
+Access-control list
+Multitenancy
+Relational database
+NoSQL
+Database index
+B-tree
+Hash table
+Bloom filter
+Consistent hashing
+CAP theorem
+Raft (algorithm)
+Paxos (computer science)
+MapReduce
+Load balancing (computing)
+Content delivery network
+Cache (computing)
+Cache replacement policies
+Rate limiting
+Microservices
+REST
+GraphQL
+gRPC
+Machine learning
+Deep learning
+Artificial neural network
+Transformer (deep learning architecture)
+BERT (language model)
+Word embedding
+Vector database
+Nearest neighbor search
+Cosine similarity
+Information retrieval
+Tf–idf
+Okapi BM25
+Retrieval-augmented generation
+Large language model
+Prompt engineering
+Knowledge graph
+Graph database
+Named-entity recognition
+Entity linking
+Question answering
+Apache Flink
+Apache Cassandra
+Apache Hive
+Apache Airflow
+Apache NiFi
+Apache Beam
+Apache ZooKeeper
+Apache HBase
+Apache Druid
+ClickHouse
+Data lake
+Data warehouse
+Data lakehouse
+Extract, transform, load
+Change data capture
+Stream processing
+Event sourcing
+Message queue
+Publish–subscribe pattern
+Distributed computing
+Distributed database
+Database transaction
+ACID
+Isolation (database systems)
+Concurrency control
+Two-phase commit protocol
+Consensus (computer science)
+Gossip protocol
+Hypertext Transfer Protocol
+WebSocket
+OpenAPI
+JSON
+XML
+Protocol Buffers
+Docker Compose
+Containerization
+Virtual machine
+Natural language processing
+Approximate nearest neighbor search
+Recommender system

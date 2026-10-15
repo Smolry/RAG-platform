@@ -1,0 +1,305 @@
+[
+  {
+    "document_id": "helios/product-overview",
+    "path": "data\\synthetic\\tenants\\helios\\product-overview.md",
+    "tenant_id": "helios",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/careers-faq",
+    "path": "data\\synthetic\\tenants\\helios\\careers-faq.md",
+    "tenant_id": "helios",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/employee-handbook",
+    "path": "data\\synthetic\\tenants\\helios\\employee-handbook.md",
+    "tenant_id": "helios",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/it-security-policy",
+    "path": "data\\synthetic\\tenants\\helios\\it-security-policy.md",
+    "tenant_id": "helios",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/expense-policy",
+    "path": "data\\synthetic\\tenants\\helios\\expense-policy.md",
+    "tenant_id": "helios",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/salary-sheet",
+    "path": "data\\synthetic\\tenants\\helios\\salary-sheet.md",
+    "tenant_id": "helios",
+    "classification": "confidential",
+    "allowed_roles": [
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/acquisition-plan",
+    "path": "data\\synthetic\\tenants\\helios\\acquisition-plan.md",
+    "tenant_id": "helios",
+    "classification": "confidential",
+    "allowed_roles": [
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "helios/incident-report",
+    "path": "data\\synthetic\\tenants\\helios\\incident-report.md",
+    "tenant_id": "helios",
+    "classification": "confidential",
+    "allowed_roles": [
+      "manager",
+      "admin"
+    ],
+    "allowed_users": [
+      "employee@helios"
+    ]
+  },
+  {
+    "document_id": "borealis/product-overview",
+    "path": "data\\synthetic\\tenants\\borealis\\product-overview.md",
+    "tenant_id": "borealis",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/careers-faq",
+    "path": "data\\synthetic\\tenants\\borealis\\careers-faq.md",
+    "tenant_id": "borealis",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/employee-handbook",
+    "path": "data\\synthetic\\tenants\\borealis\\employee-handbook.md",
+    "tenant_id": "borealis",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/it-security-policy",
+    "path": "data\\synthetic\\tenants\\borealis\\it-security-policy.md",
+    "tenant_id": "borealis",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/expense-policy",
+    "path": "data\\synthetic\\tenants\\borealis\\expense-policy.md",
+    "tenant_id": "borealis",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/salary-sheet",
+    "path": "data\\synthetic\\tenants\\borealis\\salary-sheet.md",
+    "tenant_id": "borealis",
+    "classification": "confidential",
+    "allowed_roles": [
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/acquisition-plan",
+    "path": "data\\synthetic\\tenants\\borealis\\acquisition-plan.md",
+    "tenant_id": "borealis",
+    "classification": "confidential",
+    "allowed_roles": [
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "borealis/incident-report",
+    "path": "data\\synthetic\\tenants\\borealis\\incident-report.md",
+    "tenant_id": "borealis",
+    "classification": "confidential",
+    "allowed_roles": [
+      "manager",
+      "admin"
+    ],
+    "allowed_users": [
+      "employee@borealis"
+    ]
+  },
+  {
+    "document_id": "cinder/product-overview",
+    "path": "data\\synthetic\\tenants\\cinder\\product-overview.md",
+    "tenant_id": "cinder",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/careers-faq",
+    "path": "data\\synthetic\\tenants\\cinder\\careers-faq.md",
+    "tenant_id": "cinder",
+    "classification": "public",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin",
+      "contractor"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/employee-handbook",
+    "path": "data\\synthetic\\tenants\\cinder\\employee-handbook.md",
+    "tenant_id": "cinder",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/it-security-policy",
+    "path": "data\\synthetic\\tenants\\cinder\\it-security-policy.md",
+    "tenant_id": "cinder",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/expense-policy",
+    "path": "data\\synthetic\\tenants\\cinder\\expense-policy.md",
+    "tenant_id": "cinder",
+    "classification": "internal",
+    "allowed_roles": [
+      "employee",
+      "manager",
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/salary-sheet",
+    "path": "data\\synthetic\\tenants\\cinder\\salary-sheet.md",
+    "tenant_id": "cinder",
+    "classification": "confidential",
+    "allowed_roles": [
+      "hr",
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/acquisition-plan",
+    "path": "data\\synthetic\\tenants\\cinder\\acquisition-plan.md",
+    "tenant_id": "cinder",
+    "classification": "confidential",
+    "allowed_roles": [
+      "admin"
+    ],
+    "allowed_users": []
+  },
+  {
+    "document_id": "cinder/incident-report",
+    "path": "data\\synthetic\\tenants\\cinder\\incident-report.md",
+    "tenant_id": "cinder",
+    "classification": "confidential",
+    "allowed_roles": [
+      "manager",
+      "admin"
+    ],
+    "allowed_users": [
+      "employee@cinder"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+Cinder Finance builds the Ledgerline payments API. Founded in 2019 and headquartered in Austin, Cinder Finance serves customers in 9 countries. Contact sales at sales@cinder.example for pricing and demos of the Ledgerline payments API.

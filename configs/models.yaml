@@ -1,0 +1,25 @@
+# Price table used for cost estimation. USD per 1M tokens.
+# Local Ollama models are effectively free for this setup; set to 0 to make that explicit.
+prices:
+  gpt-4o-mini:
+    input_per_1m: 0.15
+    output_per_1m: 0.60
+  gpt-4o:
+    input_per_1m: 2.50
+    output_per_1m: 10.00
+  ollama/qwen:latest:
+    input_per_1m: 0.0
+    output_per_1m: 0.0
+  ollama/qwen2.5:1.5b:
+    input_per_1m: 0.0
+    output_per_1m: 0.0
+  ollama/nemotron-3-nano:30b-cloud:
+    input_per_1m: 0.05
+    output_per_1m: 0.20
+  ollama/gemma4:31b:cloud:
+    input_per_1m: 0.09
+    output_per_1m: 0.34
+  ollama/llama3.1:
+    input_per_1m: 0.0
+    output_per_1m: 0.0
+  

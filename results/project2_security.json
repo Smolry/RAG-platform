@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-13T14:27:48.640411+00:00",
+  "embedder": "sentence-transformers",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "qdrant_url": "http://localhost:6333",
+  "chunk_tokens": 500,
+  "total_queries": 840,
+  "authorized_chunks_returned": 4200,
+  "leaks": 0,
+  "cross_tenant_leaks": 0,
+  "adversarial_pass_rate": 1.0,
+  "leak_details": []
+}

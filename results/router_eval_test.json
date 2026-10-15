@@ -1,0 +1,22 @@
+{
+  "n": 40,
+  "accuracy": 0.975,
+  "confusion": {
+    "tp": 19,
+    "tn": 20,
+    "fp_wasteful": 0,
+    "fn_risky": 1
+  },
+  "complex_recall": 0.95,
+  "complex_precision": 1.0,
+  "errors": [
+    {
+      "query": "What are the security and performance implications of storing access metadata in a vector database?",
+      "gold": "complex",
+      "pred": "simple"
+    }
+  ],
+  "split": "test",
+  "signals": "query-only (no retrieval scores)",
+  "config": "configs/routing.yaml"
+}

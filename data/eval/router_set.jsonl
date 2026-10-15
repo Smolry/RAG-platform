@@ -1,0 +1,112 @@
+{"query": "What is Redis?", "label": "simple", "split": "dev"}
+{"query": "Who created Git?", "label": "simple", "split": "dev"}
+{"query": "What port does PostgreSQL use by default?", "label": "simple", "split": "dev"}
+{"query": "What does DNS stand for?", "label": "simple", "split": "test"}
+{"query": "What is a B-tree?", "label": "simple", "split": "test"}
+{"query": "When was Linux first released?", "label": "simple", "split": "dev"}
+{"query": "What language is Kubernetes written in?", "label": "simple", "split": "dev"}
+{"query": "What is the default HTTP port?", "label": "simple", "split": "dev"}
+{"query": "What does ACL stand for?", "label": "simple", "split": "test"}
+{"query": "What is Apache Kafka?", "label": "simple", "split": "test"}
+{"query": "Who developed Docker?", "label": "simple", "split": "dev"}
+{"query": "What does JWT stand for?", "label": "simple", "split": "dev"}
+{"query": "What is SQLite?", "label": "simple", "split": "dev"}
+{"query": "What is a Bloom filter?", "label": "simple", "split": "test"}
+{"query": "What is the capital of France?", "label": "simple", "split": "test"}
+{"query": "What does CAP stand for in the CAP theorem?", "label": "simple", "split": "dev"}
+{"query": "What is MapReduce?", "label": "simple", "split": "dev"}
+{"query": "What is a hash table?", "label": "simple", "split": "dev"}
+{"query": "What is BERT?", "label": "simple", "split": "test"}
+{"query": "What does RAG stand for?", "label": "simple", "split": "test"}
+{"query": "What is cosine similarity?", "label": "simple", "split": "dev"}
+{"query": "What is Elasticsearch?", "label": "simple", "split": "dev"}
+{"query": "What does TLS stand for?", "label": "simple", "split": "dev"}
+{"query": "Who invented the World Wide Web?", "label": "simple", "split": "test"}
+{"query": "What is gRPC?", "label": "simple", "split": "test"}
+{"query": "What is GraphQL?", "label": "simple", "split": "dev"}
+{"query": "What does REST stand for?", "label": "simple", "split": "dev"}
+{"query": "What is TF-IDF?", "label": "simple", "split": "dev"}
+{"query": "What is a vector database?", "label": "simple", "split": "test"}
+{"query": "What is entity linking?", "label": "simple", "split": "test"}
+{"query": "What is a CDN?", "label": "simple", "split": "dev"}
+{"query": "What is OAuth?", "label": "simple", "split": "dev"}
+{"query": "What is a knowledge graph?", "label": "simple", "split": "dev"}
+{"query": "What is Apache Spark?", "label": "simple", "split": "test"}
+{"query": "What is Hadoop?", "label": "simple", "split": "test"}
+{"query": "What is a NoSQL database?", "label": "simple", "split": "dev"}
+{"query": "What is a microservice?", "label": "simple", "split": "dev"}
+{"query": "What is Paxos?", "label": "simple", "split": "dev"}
+{"query": "What is a word embedding?", "label": "simple", "split": "test"}
+{"query": "What is prompt engineering?", "label": "simple", "split": "test"}
+{"query": "Which company created Kubernetes?", "label": "simple", "split": "dev"}
+{"query": "What does SQL stand for?", "label": "simple", "split": "dev"}
+{"query": "What is a database index?", "label": "simple", "split": "dev"}
+{"query": "What is multitenancy?", "label": "simple", "split": "test"}
+{"query": "What is rate limiting?", "label": "simple", "split": "test"}
+{"query": "What is Raft?", "label": "simple", "split": "dev"}
+{"query": "What is BM25?", "label": "simple", "split": "dev"}
+{"query": "What does ML stand for?", "label": "simple", "split": "dev"}
+{"query": "What is a graph database?", "label": "simple", "split": "test"}
+{"query": "What is a load balancer?", "label": "simple", "split": "test"}
+{"query": "Why does Raft need a leader and how does it differ from Paxos?", "label": "complex", "split": "dev"}
+{"query": "Compare Kafka and RabbitMQ for event streaming.", "label": "complex", "split": "dev"}
+{"query": "Explain the trade-off between consistency and availability in distributed databases.", "label": "complex", "split": "dev"}
+{"query": "What are the advantages and disadvantages of microservices compared to a monolith?", "label": "complex", "split": "test"}
+{"query": "Why is a B-tree preferred over a binary search tree for databases?", "label": "complex", "split": "test"}
+{"query": "How does OAuth differ from SAML, and when should each be used?", "label": "complex", "split": "dev"}
+{"query": "Explain how retrieval-augmented generation reduces hallucination and what its limits are.", "label": "complex", "split": "dev"}
+{"query": "Compare vector databases and graph databases for question answering.", "label": "complex", "split": "dev"}
+{"query": "Why do Bloom filters produce false positives but never false negatives?", "label": "complex", "split": "test"}
+{"query": "Explain the relationship between TCP, IP, and DNS when loading a web page.", "label": "complex", "split": "test"}
+{"query": "What are the differences between Hadoop MapReduce and Apache Spark, and why did Spark become popular?", "label": "complex", "split": "dev"}
+{"query": "Why might a cache with a low similarity threshold return wrong answers, and how can this be prevented?", "label": "complex", "split": "dev"}
+{"query": "Compare role-based access control with access-control lists and explain when to use each.", "label": "complex", "split": "dev"}
+{"query": "How does consistent hashing reduce data movement when nodes are added, and why does it matter?", "label": "complex", "split": "test"}
+{"query": "Explain why Transformer models replaced recurrent neural networks for language tasks.", "label": "complex", "split": "test"}
+{"query": "What is the impact of chunk size on retrieval quality in RAG systems?", "label": "complex", "split": "dev"}
+{"query": "Compare TF-IDF and BM25 and explain why BM25 usually performs better.", "label": "complex", "split": "dev"}
+{"query": "Why is entity resolution necessary when building a knowledge graph from text?", "label": "complex", "split": "dev"}
+{"query": "Analyze the pros and cons of using JWTs instead of server-side sessions for authentication.", "label": "complex", "split": "test"}
+{"query": "Explain how Kubernetes handles pod failures and what that implies for stateful applications.", "label": "complex", "split": "test"}
+{"query": "What are the differences between a relational database and a NoSQL database and when should each be chosen?", "label": "complex", "split": "dev"}
+{"query": "Why does multi-hop question answering fail with plain vector search?", "label": "complex", "split": "dev"}
+{"query": "Summarize how TLS establishes a secure connection and why each step is needed.", "label": "complex", "split": "dev"}
+{"query": "Compare cosine similarity and Euclidean distance for text embeddings and explain which is better.", "label": "complex", "split": "test"}
+{"query": "Explain why a semantic cache could leak data between tenants and how to prevent that.", "label": "complex", "split": "test"}
+{"query": "How do rate limiting and load balancing differ, and how do they work together?", "label": "complex", "split": "dev"}
+{"query": "Evaluate the trade-offs between GraphQL and REST for a public API.", "label": "complex", "split": "dev"}
+{"query": "Why do hash tables degrade in performance under heavy collisions and how do implementations mitigate it?", "label": "complex", "split": "dev"}
+{"query": "Explain the difference between fine-tuning and retrieval-augmented generation and when to use each.", "label": "complex", "split": "test"}
+{"query": "What is the relationship between Docker containers and Kubernetes, and why are both used?", "label": "complex", "split": "test"}
+{"query": "Compare Redis and Memcached and explain the cases where each is the better choice.", "label": "complex", "split": "dev"}
+{"query": "Explain how Elasticsearch ranks documents and why that differs from a SQL query.", "label": "complex", "split": "dev"}
+{"query": "Why is the CAP theorem often misunderstood, and what are the practical consequences for system design?", "label": "complex", "split": "dev"}
+{"query": "Describe how named-entity recognition and entity linking work together and why errors compound.", "label": "complex", "split": "test"}
+{"query": "What are the differences between Paxos, Raft, and two-phase commit?", "label": "complex", "split": "test"}
+{"query": "How does a content delivery network reduce latency and what are the downsides?", "label": "complex", "split": "dev"}
+{"query": "Explain why gRPC can be faster than REST and when it is a poor choice.", "label": "complex", "split": "dev"}
+{"query": "Compare SQLite and PostgreSQL for a small web application and explain the trade-offs.", "label": "complex", "split": "dev"}
+{"query": "Why do word embeddings capture semantic similarity and where do they fail?", "label": "complex", "split": "test"}
+{"query": "How does database indexing speed up queries and why does it slow down writes?", "label": "complex", "split": "test"}
+{"query": "Explain the impact of prompt injection on retrieval systems and what mitigations exist.", "label": "complex", "split": "dev"}
+{"query": "Compare Apache Kafka and a traditional message queue and explain why log-based storage matters.", "label": "complex", "split": "dev"}
+{"query": "Why would an engineer choose a graph database over a relational database for connected data?", "label": "complex", "split": "dev"}
+{"query": "Explain how BERT differs from GPT in architecture and training objective.", "label": "complex", "split": "test"}
+{"query": "What are the security and performance implications of storing access metadata in a vector database?", "label": "complex", "split": "test"}
+{"query": "Discuss why cache invalidation is hard and how versioning can help.", "label": "complex", "split": "dev"}
+{"query": "How do multitenancy and data isolation interact, and why can shared infrastructure be risky?", "label": "complex", "split": "dev"}
+{"query": "Explain why p95 latency matters more than average latency for user experience.", "label": "complex", "split": "dev"}
+{"query": "Compare nearest neighbor search approaches such as HNSW and brute force and explain the accuracy trade-off.", "label": "complex", "split": "test"}
+{"query": "Why does reranking with a cross-encoder improve retrieval quality compared to bi-encoder retrieval alone?", "label": "complex", "split": "test"}
+{"query": "Why is Linux called Linux?", "label": "simple", "split": "stress"}
+{"query": "What does vs stand for in the Git diff output?", "label": "simple", "split": "stress"}
+{"query": "What is the difference operator in SQL called?", "label": "simple", "split": "stress"}
+{"query": "Who explained the CAP theorem first?", "label": "simple", "split": "stress"}
+{"query": "What is Apache Kafka, Apache Spark, or Apache Hadoop's license?", "label": "simple", "split": "stress"}
+{"query": "What is the Raft consensus algorithm paper's title and which year was it published?", "label": "simple", "split": "stress"}
+{"query": "How does Raft survive a partitioned leader?", "label": "complex", "split": "stress"}
+{"query": "When should I pick Postgres over Mongo?", "label": "complex", "split": "stress"}
+{"query": "How can a cached answer leak across tenants?", "label": "complex", "split": "stress"}
+{"query": "What breaks when embeddings change?", "label": "complex", "split": "stress"}
+{"query": "How would you scale a vector index to a billion vectors?", "label": "complex", "split": "stress"}
+{"query": "What goes wrong when OAuth tokens are not rotated?", "label": "complex", "split": "stress"}

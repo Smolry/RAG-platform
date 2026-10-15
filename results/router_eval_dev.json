@@ -1,0 +1,22 @@
+{
+  "n": 60,
+  "accuracy": 0.9833333333333333,
+  "confusion": {
+    "tp": 29,
+    "tn": 30,
+    "fp_wasteful": 0,
+    "fn_risky": 1
+  },
+  "complex_recall": 0.9666666666666667,
+  "complex_precision": 1.0,
+  "errors": [
+    {
+      "query": "How does a content delivery network reduce latency and what are the downsides?",
+      "gold": "complex",
+      "pred": "simple"
+    }
+  ],
+  "split": "dev",
+  "signals": "query-only (no retrieval scores)",
+  "config": "configs/routing.yaml"
+}

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Project 2 RAG platform results</title>
+  <desc id="description">Evaluation quality, retrieval, security and ACL performance results for Project 2.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111d31"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <style>
+      text { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .muted { fill: #9aabc2; }
+      .body { fill: #dbe6f4; }
+      .panel { fill: #111d2f; stroke: #26364d; stroke-width: 1.5; }
+      .label { fill: #9aabc2; font-size: 16px; font-weight: 600; letter-spacing: 1.4px; }
+      .value { fill: #f4f8fc; font-size: 42px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1460" cy="40" r="230" fill="#15364a" opacity=".22"/>
+  <circle cx="40" cy="960" r="280" fill="#103c37" opacity=".18"/>
+
+  <text x="76" y="75" fill="#5eead4" font-size="15" font-weight="700" letter-spacing="2.6">RAG PLATFORM  /  PROJECT 2</text>
+  <text x="76" y="132" fill="#f4f8fc" font-size="44" font-weight="750">Permission-aware RAG, measured.</text>
+  <text x="76" y="169" class="muted" font-size="18">Evaluation quality, tenant-isolation security, and ACL performance</text>
+  <rect x="1316" y="69" width="208" height="42" rx="21" fill="#12352f" stroke="#23745f"/>
+  <circle cx="1340" cy="90" r="6" fill="#34d399"/>
+  <text x="1356" y="96" fill="#a7f3d0" font-size="14" font-weight="700" letter-spacing=".8">MEASURED RESULTS</text>
+  <rect x="76" y="196" width="1448" height="2" fill="url(#accent)" opacity=".8"/>
+
+  <text x="76" y="239" class="label">ANSWER QUALITY  ·  78 VALIDATED QUESTIONS</text>
+  <g>
+    <rect x="76" y="261" width="458" height="164" rx="16" class="panel"/>
+    <text x="104" y="301" class="label">RETRIEVAL HIT RATE</text>
+    <text x="104" y="357" class="value">92.3<tspan fill="#9aabc2" font-size="25">%</tspan></text>
+    <rect x="104" y="386" width="398" height="8" rx="4" fill="#26364d"/>
+    <rect x="104" y="386" width="368" height="8" rx="4" fill="url(#accent)"/>
+
+    <rect x="571" y="261" width="458" height="164" rx="16" class="panel"/>
+    <text x="599" y="301" class="label">CITATION CORRECTNESS</text>
+    <text x="599" y="357" class="value">76.9<tspan fill="#9aabc2" font-size="25">%</tspan></text>
+    <rect x="599" y="386" width="398" height="8" rx="4" fill="#26364d"/>
+    <rect x="599" y="386" width="306" height="8" rx="4" fill="#60a5fa"/>
+
+    <rect x="1066" y="261" width="458" height="164" rx="16" class="panel"/>
+    <text x="1094" y="301" class="label">ANSWER CORRECTNESS · LLM JUDGE</text>
+    <text x="1094" y="357" class="value">78.2<tspan fill="#9aabc2" font-size="25">%</tspan></text>
+    <rect x="1094" y="386" width="398" height="8" rx="4" fill="#26364d"/>
+    <rect x="1094" y="386" width="311" height="8" rx="4" fill="#a78bfa"/>
+  </g>
+
+  <text x="76" y="477" class="label">TENANT ISOLATION  ·  840 ADVERSARIAL QUERIES</text>
+  <g>
+    <rect x="76" y="499" width="700" height="196" rx="16" class="panel"/>
+    <circle cx="131" cy="563" r="30" fill="#12352f"/>
+    <path d="M118 563l9 9 18-20" fill="none" stroke="#5eead4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="182" y="550" fill="#f4f8fc" font-size="31" font-weight="700">0 cross-tenant leaks</text>
+    <text x="182" y="581" class="muted" font-size="17">0 leaks observed across 840 security-suite queries</text>
+    <rect x="110" y="626" width="630" height="12" rx="6" fill="#26364d"/>
+    <rect x="110" y="626" width="630" height="12" rx="6" fill="url(#accent)"/>
+    <text x="110" y="669" fill="#a7f3d0" font-size="15" font-weight="700">100% adversarial pass rate in this test run</text>
+
+    <rect x="800" y="499" width="724" height="196" rx="16" class="panel"/>
+    <text x="834" y="541" class="label">RETRIEVAL LATENCY</text>
+    <text x="834" y="590" fill="#f4f8fc" font-size="34" font-weight="700">13.2 s</text>
+    <text x="834" y="619" class="muted" font-size="15">p50 end-to-end</text>
+    <rect x="1137" y="535" width="1.5" height="124" fill="#26364d"/>
+    <text x="1180" y="590" fill="#f4f8fc" font-size="34" font-weight="700">41.5 s</text>
+    <text x="1180" y="619" class="muted" font-size="15">p95 end-to-end</text>
+    <text x="834" y="668" class="muted" font-size="14">Across 78 evaluation questions; latency is end-to-end.</text>
+  </g>
+
+  <text x="76" y="747" class="label">ACL OVERHEAD &amp; PERMISSION REVOCATION</text>
+  <g>
+    <rect x="76" y="769" width="700" height="124" rx="16" class="panel"/>
+    <text x="108" y="809" fill="#f4f8fc" font-size="20" font-weight="700">Vector-search ACL filter overhead</text>
+    <text x="108" y="849" class="body" font-size="17">p50  <tspan fill="#5eead4" font-weight="700">+1.81 ms</tspan></text>
+    <text x="375" y="849" class="body" font-size="17">p95  <tspan fill="#5eead4" font-weight="700">+6.94 ms</tspan></text>
+    <text x="108" y="876" class="muted" font-size="13">Measured over 200 queries, filtered vs. unfiltered search.</text>
+
+    <rect x="800" y="769" width="724" height="124" rx="16" class="panel"/>
+    <text x="832" y="809" fill="#f4f8fc" font-size="20" font-weight="700">Revocation takes effect</text>
+    <text x="832" y="849" class="body" font-size="17">p50  <tspan fill="#5eead4" font-weight="700">41.5 ms</tspan></text>
+    <text x="1125" y="849" class="body" font-size="17">max  <tspan fill="#5eead4" font-weight="700">343.3 ms</tspan></text>
+    <text x="832" y="876" class="muted" font-size="13">20 revocation trials; observed propagation time.</text>
+  </g>
+
+  <text x="76" y="930" class="muted" font-size="13">Models: ollama/nemotron-3-nano:30b-cloud · judge: ollama/gemma4:31b:cloud</text>
+  <text x="76" y="953" fill="#71839a" font-size="12">Cost is recorded as $0.00/request by the configured model price table; this is not a verified provider bill. Results reflect these test runs, not a guarantee.</text>
+  <text x="1524" y="953" fill="#71839a" font-size="12" text-anchor="end">Source: results/project2_* artifacts</text>
+</svg>

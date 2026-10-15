@@ -1,0 +1,62 @@
+{
+  "n": 12,
+  "accuracy": 0.25,
+  "confusion": {
+    "tp": 0,
+    "tn": 3,
+    "fp_wasteful": 3,
+    "fn_risky": 6
+  },
+  "complex_recall": 0.0,
+  "complex_precision": 0.0,
+  "errors": [
+    {
+      "query": "Why is Linux called Linux?",
+      "gold": "simple",
+      "pred": "complex"
+    },
+    {
+      "query": "What does vs stand for in the Git diff output?",
+      "gold": "simple",
+      "pred": "complex"
+    },
+    {
+      "query": "What is the difference operator in SQL called?",
+      "gold": "simple",
+      "pred": "complex"
+    },
+    {
+      "query": "How does Raft survive a partitioned leader?",
+      "gold": "complex",
+      "pred": "simple"
+    },
+    {
+      "query": "When should I pick Postgres over Mongo?",
+      "gold": "complex",
+      "pred": "simple"
+    },
+    {
+      "query": "How can a cached answer leak across tenants?",
+      "gold": "complex",
+      "pred": "simple"
+    },
+    {
+      "query": "What breaks when embeddings change?",
+      "gold": "complex",
+      "pred": "simple"
+    },
+    {
+      "query": "How would you scale a vector index to a billion vectors?",
+      "gold": "complex",
+      "pred": "simple"
+    },
+    {
+      "query": "What goes wrong when OAuth tokens are not rotated?",
+      "gold": "complex",
+      "pred": "simple"
+    }
+  ],
+  "split": "stress",
+  "signals": "query-only (no retrieval scores)",
+  "config": "configs/routing.yaml"
+}
