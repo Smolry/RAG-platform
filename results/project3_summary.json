@@ -1,0 +1,1001 @@
+{
+  "timestamp": "2026-10-18T17:35:08.941731+00:00",
+  "n_questions": 180,
+  "n_unvalidated": 0,
+  "questions_sha256": "78895dab5a099a6e",
+  "arms": {
+    "vector": {
+      "by_slice": {
+        "all": {
+          "n": 180,
+          "em": 0.5555555555555556,
+          "f1": 0.6289814814814815,
+          "sf_recall": 0.8305555555555556,
+          "all_supporting_found": 0.6888888888888889,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.0003987580555555556,
+          "p50_latency_ms": 6374.644599993189,
+          "p95_latency_ms": 22117.780020000664,
+          "mean_seeds": null
+        },
+        "multi_hop": {
+          "n": 120,
+          "em": 0.39166666666666666,
+          "f1": 0.46958333333333335,
+          "sf_recall": 0.7458333333333333,
+          "all_supporting_found": 0.5333333333333333,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.00047779958333333335,
+          "p50_latency_ms": 8024.225849992945,
+          "p95_latency_ms": 26087.166760002565,
+          "mean_seeds": null
+        },
+        "bridge": {
+          "n": 96,
+          "em": 0.3645833333333333,
+          "f1": 0.43814484126984127,
+          "sf_recall": 0.7135416666666666,
+          "all_supporting_found": 0.46875,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.000502771875,
+          "p50_latency_ms": 8037.498949997826,
+          "p95_latency_ms": 27557.38205000307,
+          "mean_seeds": null
+        },
+        "comparison": {
+          "n": 24,
+          "em": 0.5,
+          "f1": 0.5953373015873016,
+          "sf_recall": 0.875,
+          "all_supporting_found": 0.7916666666666666,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.0003779104166666667,
+          "p50_latency_ms": 7756.408499997633,
+          "p95_latency_ms": 18605.503390002566,
+          "mean_seeds": null
+        },
+        "single": {
+          "n": 60,
+          "em": 0.8833333333333333,
+          "f1": 0.9477777777777778,
+          "sf_recall": 1.0,
+          "all_supporting_found": 1.0,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.000240675,
+          "p50_latency_ms": 3291.220750004868,
+          "p95_latency_ms": 6595.961685006473,
+          "mean_seeds": null
+        },
+        "multi_hop:hard": {
+          "n": 120,
+          "em": 0.39166666666666666,
+          "f1": 0.46958333333333335,
+          "sf_recall": 0.7458333333333333,
+          "all_supporting_found": 0.5333333333333333,
+          "candidate_recall": null,
+          "cost_per_query_usd": 0.00047779958333333335,
+          "p50_latency_ms": 8024.225849992945,
+          "p95_latency_ms": 26087.166760002565,
+          "mean_seeds": null
+        }
+      }
+    },
+    "vector_rerank": {
+      "by_slice": {
+        "all": {
+          "n": 180,
+          "em": 0.6055555555555555,
+          "f1": 0.6927733686067019,
+          "sf_recall": 0.8777777777777778,
+          "all_supporting_found": 0.7555555555555555,
+          "candidate_recall": 0.9138888888888889,
+          "cost_per_query_usd": 0.00014391472222222222,
+          "p50_latency_ms": 2101.433799994993,
+          "p95_latency_ms": 10118.100520010938,
+          "mean_seeds": 0
+        },
+        "multi_hop": {
+          "n": 120,
+          "em": 0.43333333333333335,
+          "f1": 0.5474933862433863,
+          "sf_recall": 0.8166666666666667,
+          "all_supporting_found": 0.6333333333333333,
+          "candidate_recall": 0.8708333333333333,
+          "cost_per_query_usd": 0.00017690333333333333,
+          "p50_latency_ms": 2364.7741000022506,
+          "p95_latency_ms": 12937.316579995235,
+          "mean_seeds": 0
+        },
+        "bridge": {
+          "n": 96,
+          "em": 0.3958333333333333,
+          "f1": 0.5100694444444445,
+          "sf_recall": 0.78125,
+          "all_supporting_found": 0.5625,
+          "candidate_recall": 0.84375,
+          "cost_per_query_usd": 0.00017250833333333333,
+          "p50_latency_ms": 2375.256300001638,
+          "p95_latency_ms": 12372.823075005726,
+          "mean_seeds": 0
+        },
+        "comparison": {
+          "n": 24,
+          "em": 0.5833333333333334,
+          "f1": 0.6971891534391534,
+          "sf_recall": 0.9583333333333334,
+          "all_supporting_found": 0.9166666666666666,
+          "candidate_recall": 0.9791666666666666,
+          "cost_per_query_usd": 0.00019448333333333334,
+          "p50_latency_ms": 2364.7741000022506,
+          "p95_latency_ms": 12737.290879997454,
+          "mean_seeds": 0
+        },
+        "single": {
+          "n": 60,
+          "em": 0.95,
+          "f1": 0.9833333333333333,
+          "sf_recall": 1.0,
+          "all_supporting_found": 1.0,
+          "candidate_recall": 1.0,
+          "cost_per_query_usd": 7.79375e-05,
+          "p50_latency_ms": 1723.0678500054637,
+          "p95_latency_ms": 2450.4684500061558,
+          "mean_seeds": 0
+        },
+        "multi_hop:hard": {
+          "n": 120,
+          "em": 0.43333333333333335,
+          "f1": 0.5474933862433863,
+          "sf_recall": 0.8166666666666667,
+          "all_supporting_found": 0.6333333333333333,
+          "candidate_recall": 0.8708333333333333,
+          "cost_per_query_usd": 0.00017690333333333333,
+          "p50_latency_ms": 2364.7741000022506,
+          "p95_latency_ms": 12937.316579995235,
+          "mean_seeds": 0
+        }
+      },
+      "vs_vector": {
+        "all": {
+          "em": {
+            "delta": 0.05,
+            "ci95": [
+              0.005555555555555556,
+              0.1
+            ],
+            "n": 180
+          },
+          "f1": {
+            "delta": 0.06379188712522046,
+            "ci95": [
+              0.020828924162257494,
+              0.11037037037037037
+            ],
+            "n": 180
+          },
+          "sf_recall": {
+            "delta": 0.04722222222222222,
+            "ci95": [
+              0.022222222222222223,
+              0.075
+            ],
+            "n": 180
+          },
+          "all_found": {
+            "delta": 0.06666666666666667,
+            "ci95": [
+              0.022222222222222223,
+              0.11666666666666667
+            ],
+            "n": 180
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "multi_hop": {
+          "em": {
+            "delta": 0.041666666666666664,
+            "ci95": [
+              -0.016666666666666666,
+              0.10833333333333334
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.07791005291005292,
+            "ci95": [
+              0.015317460317460318,
+              0.14425925925925925
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07083333333333333,
+            "ci95": [
+              0.03333333333333333,
+              0.1125
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.1,
+            "ci95": [
+              0.03333333333333333,
+              0.175
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "bridge": {
+          "em": {
+            "delta": 0.03125,
+            "ci95": [
+              -0.041666666666666664,
+              0.10416666666666667
+            ],
+            "n": 96
+          },
+          "f1": {
+            "delta": 0.07192460317460318,
+            "ci95": [
+              -0.0033730158730158714,
+              0.14618055555555556
+            ],
+            "n": 96
+          },
+          "sf_recall": {
+            "delta": 0.06770833333333333,
+            "ci95": [
+              0.026041666666666668,
+              0.11458333333333333
+            ],
+            "n": 96
+          },
+          "all_found": {
+            "delta": 0.09375,
+            "ci95": [
+              0.010416666666666666,
+              0.17708333333333334
+            ],
+            "n": 96
+          },
+          "claim": "F1 improvement NOT supported by this data (CI includes 0 or negative)"
+        },
+        "comparison": {
+          "em": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.0,
+              0.20833333333333334
+            ],
+            "n": 24
+          },
+          "f1": {
+            "delta": 0.10185185185185186,
+            "ci95": [
+              0.0,
+              0.22685185185185186
+            ],
+            "n": 24
+          },
+          "sf_recall": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.020833333333333332,
+              0.16666666666666666
+            ],
+            "n": 24
+          },
+          "all_found": {
+            "delta": 0.125,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "n": 24
+          },
+          "claim": "F1 improvement NOT supported by this data (CI includes 0 or negative)"
+        },
+        "single": {
+          "em": {
+            "delta": 0.06666666666666667,
+            "ci95": [
+              0.016666666666666666,
+              0.13333333333333333
+            ],
+            "n": 60
+          },
+          "f1": {
+            "delta": 0.035555555555555556,
+            "ci95": [
+              0.005555555555555556,
+              0.07666666666666666
+            ],
+            "n": 60
+          },
+          "sf_recall": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "all_found": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "claim": "no F1 harm SUPPORTED (CI lower bound > -0.05)"
+        },
+        "multi_hop:hard": {
+          "em": {
+            "delta": 0.041666666666666664,
+            "ci95": [
+              -0.016666666666666666,
+              0.10833333333333334
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.07791005291005292,
+            "ci95": [
+              0.015317460317460318,
+              0.14425925925925925
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07083333333333333,
+            "ci95": [
+              0.03333333333333333,
+              0.1125
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.1,
+            "ci95": [
+              0.03333333333333333,
+              0.175
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        }
+      }
+    },
+    "hybrid": {
+      "by_slice": {
+        "all": {
+          "n": 180,
+          "em": 0.6166666666666667,
+          "f1": 0.7114594356261023,
+          "sf_recall": 0.8833333333333333,
+          "all_supporting_found": 0.7666666666666667,
+          "candidate_recall": 0.9805555555555555,
+          "cost_per_query_usd": 0.0001501416111111111,
+          "p50_latency_ms": 4020.5433499941137,
+          "p95_latency_ms": 7890.033325005066,
+          "mean_seeds": 1.538888888888889
+        },
+        "multi_hop": {
+          "n": 120,
+          "em": 0.44166666666666665,
+          "f1": 0.5700462962962963,
+          "sf_recall": 0.825,
+          "all_supporting_found": 0.65,
+          "candidate_recall": 0.9708333333333333,
+          "cost_per_query_usd": 0.0001556495,
+          "p50_latency_ms": 4145.607000005839,
+          "p95_latency_ms": 7890.033325005059,
+          "mean_seeds": 1.725
+        },
+        "bridge": {
+          "n": 96,
+          "em": 0.3958333333333333,
+          "f1": 0.5278439153439154,
+          "sf_recall": 0.7916666666666666,
+          "all_supporting_found": 0.5833333333333334,
+          "candidate_recall": 0.9635416666666666,
+          "cost_per_query_usd": 0.00015628958333333335,
+          "p50_latency_ms": 4042.4536999998963,
+          "p95_latency_ms": 8335.087175000808,
+          "mean_seeds": 1.6666666666666667
+        },
+        "comparison": {
+          "n": 24,
+          "em": 0.625,
+          "f1": 0.7388558201058201,
+          "sf_recall": 0.9583333333333334,
+          "all_supporting_found": 0.9166666666666666,
+          "candidate_recall": 1.0,
+          "cost_per_query_usd": 0.00015308916666666666,
+          "p50_latency_ms": 4276.80749999854,
+          "p95_latency_ms": 6537.377485009347,
+          "mean_seeds": 1.9583333333333333
+        },
+        "single": {
+          "n": 60,
+          "em": 0.9666666666666667,
+          "f1": 0.9942857142857143,
+          "sf_recall": 1.0,
+          "all_supporting_found": 1.0,
+          "candidate_recall": 1.0,
+          "cost_per_query_usd": 0.00013912583333333334,
+          "p50_latency_ms": 3731.162600008247,
+          "p95_latency_ms": 7947.9893249896,
+          "mean_seeds": 1.1666666666666667
+        },
+        "multi_hop:hard": {
+          "n": 120,
+          "em": 0.44166666666666665,
+          "f1": 0.5700462962962963,
+          "sf_recall": 0.825,
+          "all_supporting_found": 0.65,
+          "candidate_recall": 0.9708333333333333,
+          "cost_per_query_usd": 0.0001556495,
+          "p50_latency_ms": 4145.607000005839,
+          "p95_latency_ms": 7890.033325005059,
+          "mean_seeds": 1.725
+        }
+      },
+      "vs_vector": {
+        "all": {
+          "em": {
+            "delta": 0.06111111111111111,
+            "ci95": [
+              0.011111111111111112,
+              0.11666666666666667
+            ],
+            "n": 180
+          },
+          "f1": {
+            "delta": 0.08247795414462081,
+            "ci95": [
+              0.03544091710758378,
+              0.1316137566137566
+            ],
+            "n": 180
+          },
+          "sf_recall": {
+            "delta": 0.05277777777777778,
+            "ci95": [
+              0.025,
+              0.08055555555555556
+            ],
+            "n": 180
+          },
+          "all_found": {
+            "delta": 0.07777777777777778,
+            "ci95": [
+              0.027777777777777776,
+              0.12777777777777777
+            ],
+            "n": 180
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "multi_hop": {
+          "em": {
+            "delta": 0.05,
+            "ci95": [
+              -0.016666666666666666,
+              0.11666666666666667
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.10046296296296296,
+            "ci95": [
+              0.03287037037037037,
+              0.17046296296296296
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07916666666666666,
+            "ci95": [
+              0.0375,
+              0.12083333333333333
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.11666666666666667,
+            "ci95": [
+              0.041666666666666664,
+              0.19166666666666668
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "bridge": {
+          "em": {
+            "delta": 0.03125,
+            "ci95": [
+              -0.03125,
+              0.09375
+            ],
+            "n": 96
+          },
+          "f1": {
+            "delta": 0.08969907407407407,
+            "ci95": [
+              0.017361111111111112,
+              0.16215277777777778
+            ],
+            "n": 96
+          },
+          "sf_recall": {
+            "delta": 0.078125,
+            "ci95": [
+              0.03125,
+              0.125
+            ],
+            "n": 96
+          },
+          "all_found": {
+            "delta": 0.11458333333333333,
+            "ci95": [
+              0.03125,
+              0.19791666666666666
+            ],
+            "n": 96
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "comparison": {
+          "em": {
+            "delta": 0.125,
+            "ci95": [
+              -0.041666666666666664,
+              0.2916666666666667
+            ],
+            "n": 24
+          },
+          "f1": {
+            "delta": 0.14351851851851852,
+            "ci95": [
+              -0.02314814814814815,
+              0.3287037037037037
+            ],
+            "n": 24
+          },
+          "sf_recall": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.020833333333333332,
+              0.16666666666666666
+            ],
+            "n": 24
+          },
+          "all_found": {
+            "delta": 0.125,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "n": 24
+          },
+          "claim": "F1 improvement NOT supported by this data (CI includes 0 or negative)"
+        },
+        "single": {
+          "em": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.0,
+              0.16666666666666666
+            ],
+            "n": 60
+          },
+          "f1": {
+            "delta": 0.046507936507936505,
+            "ci95": [
+              0.00873015873015873,
+              0.09333333333333332
+            ],
+            "n": 60
+          },
+          "sf_recall": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "all_found": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "claim": "no F1 harm SUPPORTED (CI lower bound > -0.05)"
+        },
+        "multi_hop:hard": {
+          "em": {
+            "delta": 0.05,
+            "ci95": [
+              -0.016666666666666666,
+              0.11666666666666667
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.10046296296296296,
+            "ci95": [
+              0.03287037037037037,
+              0.17046296296296296
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07916666666666666,
+            "ci95": [
+              0.0375,
+              0.12083333333333333
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.11666666666666667,
+            "ci95": [
+              0.041666666666666664,
+              0.19166666666666668
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        }
+      }
+    },
+    "hybrid_ngram": {
+      "by_slice": {
+        "all": {
+          "n": 180,
+          "em": 0.6055555555555555,
+          "f1": 0.6891446208112875,
+          "sf_recall": 0.8833333333333333,
+          "all_supporting_found": 0.7666666666666667,
+          "candidate_recall": 0.9694444444444444,
+          "cost_per_query_usd": 0.00014195666666666666,
+          "p50_latency_ms": 3475.172250000469,
+          "p95_latency_ms": 6616.921389997157,
+          "mean_seeds": 1.7777777777777777
+        },
+        "multi_hop": {
+          "n": 120,
+          "em": 0.425,
+          "f1": 0.5376851851851852,
+          "sf_recall": 0.825,
+          "all_supporting_found": 0.65,
+          "candidate_recall": 0.9541666666666667,
+          "cost_per_query_usd": 0.00015862166666666668,
+          "p50_latency_ms": 3666.2284999983967,
+          "p95_latency_ms": 7225.071885006034,
+          "mean_seeds": 1.9583333333333333
+        },
+        "bridge": {
+          "n": 96,
+          "em": 0.3958333333333333,
+          "f1": 0.5082258597883598,
+          "sf_recall": 0.7916666666666666,
+          "all_supporting_found": 0.5833333333333334,
+          "candidate_recall": 0.9427083333333334,
+          "cost_per_query_usd": 0.0001613515625,
+          "p50_latency_ms": 3619.8539000033634,
+          "p95_latency_ms": 7436.986450000404,
+          "mean_seeds": 1.9479166666666667
+        },
+        "comparison": {
+          "n": 24,
+          "em": 0.5416666666666666,
+          "f1": 0.6555224867724868,
+          "sf_recall": 0.9583333333333334,
+          "all_supporting_found": 0.9166666666666666,
+          "candidate_recall": 1.0,
+          "cost_per_query_usd": 0.00014770208333333333,
+          "p50_latency_ms": 3925.514349997684,
+          "p95_latency_ms": 7044.390305005073,
+          "mean_seeds": 2
+        },
+        "single": {
+          "n": 60,
+          "em": 0.9666666666666667,
+          "f1": 0.9920634920634921,
+          "sf_recall": 1.0,
+          "all_supporting_found": 1.0,
+          "candidate_recall": 1.0,
+          "cost_per_query_usd": 0.00010862666666666667,
+          "p50_latency_ms": 2672.3250499999267,
+          "p95_latency_ms": 5459.640989995387,
+          "mean_seeds": 1.4166666666666667
+        },
+        "multi_hop:hard": {
+          "n": 120,
+          "em": 0.425,
+          "f1": 0.5376851851851852,
+          "sf_recall": 0.825,
+          "all_supporting_found": 0.65,
+          "candidate_recall": 0.9541666666666667,
+          "cost_per_query_usd": 0.00015862166666666668,
+          "p50_latency_ms": 3666.2284999983967,
+          "p95_latency_ms": 7225.071885006034,
+          "mean_seeds": 1.9583333333333333
+        }
+      },
+      "vs_vector": {
+        "all": {
+          "em": {
+            "delta": 0.05,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "n": 180
+          },
+          "f1": {
+            "delta": 0.06016313932980599,
+            "ci95": [
+              0.01564814814814815,
+              0.10626543209876542
+            ],
+            "n": 180
+          },
+          "sf_recall": {
+            "delta": 0.05277777777777778,
+            "ci95": [
+              0.025,
+              0.08055555555555556
+            ],
+            "n": 180
+          },
+          "all_found": {
+            "delta": 0.07777777777777778,
+            "ci95": [
+              0.027777777777777776,
+              0.12777777777777777
+            ],
+            "n": 180
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "multi_hop": {
+          "em": {
+            "delta": 0.03333333333333333,
+            "ci95": [
+              -0.025,
+              0.09166666666666666
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.06810185185185186,
+            "ci95": [
+              0.005972222222222223,
+              0.13421296296296295
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07916666666666666,
+            "ci95": [
+              0.0375,
+              0.12083333333333333
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.11666666666666667,
+            "ci95": [
+              0.041666666666666664,
+              0.19166666666666668
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        },
+        "bridge": {
+          "em": {
+            "delta": 0.03125,
+            "ci95": [
+              -0.03125,
+              0.09375
+            ],
+            "n": 96
+          },
+          "f1": {
+            "delta": 0.07008101851851851,
+            "ci95": [
+              -0.0005787037037037045,
+              0.14027777777777778
+            ],
+            "n": 96
+          },
+          "sf_recall": {
+            "delta": 0.078125,
+            "ci95": [
+              0.03125,
+              0.125
+            ],
+            "n": 96
+          },
+          "all_found": {
+            "delta": 0.11458333333333333,
+            "ci95": [
+              0.03125,
+              0.19791666666666666
+            ],
+            "n": 96
+          },
+          "claim": "F1 improvement NOT supported by this data (CI includes 0 or negative)"
+        },
+        "comparison": {
+          "em": {
+            "delta": 0.041666666666666664,
+            "ci95": [
+              -0.08333333333333333,
+              0.20833333333333334
+            ],
+            "n": 24
+          },
+          "f1": {
+            "delta": 0.06018518518518518,
+            "ci95": [
+              -0.08333333333333333,
+              0.20833333333333334
+            ],
+            "n": 24
+          },
+          "sf_recall": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.020833333333333332,
+              0.16666666666666666
+            ],
+            "n": 24
+          },
+          "all_found": {
+            "delta": 0.125,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "n": 24
+          },
+          "claim": "F1 improvement NOT supported by this data (CI includes 0 or negative)"
+        },
+        "single": {
+          "em": {
+            "delta": 0.08333333333333333,
+            "ci95": [
+              0.0,
+              0.16666666666666666
+            ],
+            "n": 60
+          },
+          "f1": {
+            "delta": 0.04428571428571428,
+            "ci95": [
+              0.00873015873015873,
+              0.09095238095238095
+            ],
+            "n": 60
+          },
+          "sf_recall": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "all_found": {
+            "delta": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "claim": "no F1 harm SUPPORTED (CI lower bound > -0.05)"
+        },
+        "multi_hop:hard": {
+          "em": {
+            "delta": 0.03333333333333333,
+            "ci95": [
+              -0.025,
+              0.09166666666666666
+            ],
+            "n": 120
+          },
+          "f1": {
+            "delta": 0.06810185185185186,
+            "ci95": [
+              0.005972222222222223,
+              0.13421296296296295
+            ],
+            "n": 120
+          },
+          "sf_recall": {
+            "delta": 0.07916666666666666,
+            "ci95": [
+              0.0375,
+              0.12083333333333333
+            ],
+            "n": 120
+          },
+          "all_found": {
+            "delta": 0.11666666666666667,
+            "ci95": [
+              0.041666666666666664,
+              0.19166666666666668
+            ],
+            "n": 120
+          },
+          "claim": "F1 improvement SUPPORTED (CI lower bound > 0)"
+        }
+      }
+    }
+  },
+  "indexing": {
+    "n_chunks": 1188,
+    "tenants": [
+      "hotpot"
+    ],
+    "llm_calls_total": 1188,
+    "llm_calls_fresh": 1176,
+    "retries": 0,
+    "input_tokens": 447943,
+    "output_tokens": 611453,
+    "indexing_cost_usd": 0.24820889000000018,
+    "fresh_cost_usd": 0.24572239000000023,
+    "rejections": {
+      "ungrounded_entity": 66,
+      "dangling_relation": 67,
+      "self_relation": 3
+    },
+    "entities_distinct_before_resolution": 8567,
+    "entities_after_resolution": 8400,
+    "merges": 167,
+    "ambiguous": 17,
+    "relations": 8156,
+    "relations_dropped_self_after_merge": 8,
+    "mentions": 11799,
+    "seconds": 2882.8687961999967,
+    "resolution_enabled": true,
+    "extraction_model": "ollama/gemma4:31b:cloud",
+    "indexing_cost_usd_per_chunk": 0.00020893004208754224,
+    "llm_backend": "litellm",
+    "embedder_backend": "sentence-transformers",
+    "graph_backend": "neo4j",
+    "NOT_FOR_REPORTING": false,
+    "store_stats": {
+      "chunks": 1193,
+      "entities": 8405,
+      "relations": 8159
+    }
+  },
+  "config": {
+    "llm_backend": "litellm",
+    "llm_model": "ollama/nemotron-3-nano:30b-cloud",
+    "extraction_model": "ollama/gemma4:31b:cloud",
+    "embedder_backend": "sentence-transformers",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_backend": "cross-encoder",
+    "rerank_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "graph_backend": "neo4j",
+    "top_k": 5,
+    "vector_k": 10,
+    "graph_hops": 2,
+    "graph_limit": 20,
+    "graph_hub_degree_cap": 50
+  }
+}

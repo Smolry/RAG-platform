@@ -1,0 +1,1 @@
+Borealis Foods builds the FrostFresh cold-chain line. Founded in 2005 and headquartered in Oslo, Borealis Foods serves customers in 31 countries. Contact sales at sales@borealis.example for pricing and demos of the FrostFresh cold-chain line.

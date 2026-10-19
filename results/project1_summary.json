@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-10-19T16:07:21.451795+00:00",
+  "n_questions": 60,
+  "eval_set_sha256": "a2b831d2f12f26d6",
+  "config": {
+    "llm_backend": "litellm",
+    "small_model": "ollama/nemotron-3-nano:30b-cloud",
+    "large_model": "ollama/gemma4:31b:cloud",
+    "judge_model": "ollama/gemma4:31b:cloud",
+    "embedder_backend": "sentence-transformers",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "cache_threshold": 0.94,
+    "cache_ttl_seconds": 86400,
+    "top_k": 5,
+    "qdrant_url": "http://localhost:6333",
+    "escalation_min_top_score": 0.3
+  },
+  "arms": {
+    "always_large": {
+      "overall": {
+        "n": 180,
+        "cost_per_request_usd": 0.00024056238888888888,
+        "total_cost_usd": 0.043301229999999996,
+        "p50_latency_ms": 894.7806500073057,
+        "p95_latency_ms": 1781.9281549906018,
+        "cache_hit_rate": 0,
+        "quality": 0.7055555555555556,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 0
+      },
+      "original": {
+        "n": 60,
+        "cost_per_request_usd": 0.00024048616666666667,
+        "total_cost_usd": 0.01442917,
+        "p50_latency_ms": 941.9247500045458,
+        "p95_latency_ms": 1688.2047650011368,
+        "cache_hit_rate": 0,
+        "quality": 0.7,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 0
+      },
+      "paraphrase": {
+        "n": 60,
+        "cost_per_request_usd": 0.0002406695,
+        "total_cost_usd": 0.01444017,
+        "p50_latency_ms": 893.6001999973087,
+        "p95_latency_ms": 1596.6772300060252,
+        "cache_hit_rate": 0,
+        "quality": 0.7166666666666667,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 0
+      },
+      "repeat": {
+        "n": 60,
+        "cost_per_request_usd": 0.0002405315,
+        "total_cost_usd": 0.01443189,
+        "p50_latency_ms": 868.8968499918701,
+        "p95_latency_ms": 1914.0444600154294,
+        "cache_hit_rate": 0,
+        "quality": 0.7,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 0
+      }
+    },
+    "routing_only": {
+      "overall": {
+        "n": 180,
+        "cost_per_request_usd": 0.00029288244444444447,
+        "total_cost_usd": 0.05271884,
+        "p50_latency_ms": 1722.6574500091374,
+        "p95_latency_ms": 12023.714529997964,
+        "cache_hit_rate": 0,
+        "quality": 0.7111111111111111,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7444444444444445,
+          "complex": 0.25555555555555554
+        },
+        "escalation_rate_of_simple": 0.23880597014925373,
+        "quality_by_route": {
+          "simple": 0.7611940298507462,
+          "complex": 0.5652173913043478
+        },
+        "false_cache_hits_judged_wrong": 0
+      },
+      "original": {
+        "n": 60,
+        "cost_per_request_usd": 0.0003486751666666667,
+        "total_cost_usd": 0.02092051,
+        "p50_latency_ms": 7398.882349996711,
+        "p95_latency_ms": 17622.157965011134,
+        "cache_hit_rate": 0,
+        "quality": 0.6833333333333333,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7333333333333333,
+          "complex": 0.26666666666666666
+        },
+        "escalation_rate_of_simple": 0.22727272727272727,
+        "quality_by_route": {
+          "simple": 0.75,
+          "complex": 0.5
+        },
+        "false_cache_hits_judged_wrong": 0
+      },
+      "paraphrase": {
+        "n": 60,
+        "cost_per_request_usd": 0.0002822746666666667,
+        "total_cost_usd": 0.01693648,
+        "p50_latency_ms": 1629.6027000062168,
+        "p95_latency_ms": 5792.947624997759,
+        "cache_hit_rate": 0,
+        "quality": 0.75,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7666666666666667,
+          "complex": 0.23333333333333334
+        },
+        "escalation_rate_of_simple": 0.21739130434782608,
+        "quality_by_route": {
+          "simple": 0.7608695652173914,
+          "complex": 0.7142857142857143
+        },
+        "false_cache_hits_judged_wrong": 0
+      },
+      "repeat": {
+        "n": 60,
+        "cost_per_request_usd": 0.0002476975,
+        "total_cost_usd": 0.014861850000000001,
+        "p50_latency_ms": 1273.1285000045318,
+        "p95_latency_ms": 3139.9234249853157,
+        "cache_hit_rate": 0,
+        "quality": 0.7,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7333333333333333,
+          "complex": 0.26666666666666666
+        },
+        "escalation_rate_of_simple": 0.2727272727272727,
+        "quality_by_route": {
+          "simple": 0.7727272727272727,
+          "complex": 0.5
+        },
+        "false_cache_hits_judged_wrong": 0
+      },
+      "vs_always_large": {
+        "cost_reduction_pct": -21.749058860452706,
+        "p95_latency_change_pct": 574.7586593950741,
+        "p50_latency_change_pct": 92.52287697494043,
+        "quality_delta": {
+          "mean": 0.005555555555555554,
+          "ci95": [
+            -0.011111111111111112,
+            0.02222222222222222
+          ],
+          "n_items": 60,
+          "noninferiority_margin": 0.05,
+          "claim": "no quality drop SUPPORTED (CI lower bound above -margin)"
+        }
+      }
+    },
+    "cache_only": {
+      "overall": {
+        "n": 180,
+        "cost_per_request_usd": 0.0001133745,
+        "total_cost_usd": 0.02040741,
+        "p50_latency_ms": 62.57150000601541,
+        "p95_latency_ms": 1337.7125300103219,
+        "cache_hit_rate": 0.5277777777777778,
+        "quality": 0.7111111111111111,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 10
+      },
+      "original": {
+        "n": 60,
+        "cost_per_request_usd": 0.00024069583333333333,
+        "total_cost_usd": 0.01444175,
+        "p50_latency_ms": 962.6124000060372,
+        "p95_latency_ms": 1583.355330002086,
+        "cache_hit_rate": 0,
+        "quality": 0.7,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 0
+      },
+      "paraphrase": {
+        "n": 60,
+        "cost_per_request_usd": 5.2062166666666664e-05,
+        "total_cost_usd": 0.00312373,
+        "p50_latency_ms": 39.48210000817198,
+        "p95_latency_ms": 931.7172300026868,
+        "cache_hit_rate": 0.7833333333333333,
+        "quality": 0.7166666666666667,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 5
+      },
+      "repeat": {
+        "n": 60,
+        "cost_per_request_usd": 4.73655e-05,
+        "total_cost_usd": 0.00284193,
+        "p50_latency_ms": 35.73879999748897,
+        "p95_latency_ms": 1084.8701700117085,
+        "cache_hit_rate": 0.8,
+        "quality": 0.7166666666666667,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": null,
+        "escalation_rate_of_simple": null,
+        "quality_by_route": null,
+        "false_cache_hits_judged_wrong": 5
+      },
+      "vs_always_large": {
+        "cost_reduction_pct": 52.871061630350916,
+        "p95_latency_change_pct": -24.92893014435943,
+        "p50_latency_change_pct": -93.00705709209241,
+        "quality_delta": {
+          "mean": 0.005555555555555555,
+          "ci95": [
+            0.0,
+            0.016666666666666666
+          ],
+          "n_items": 60,
+          "noninferiority_margin": 0.05,
+          "claim": "no quality drop SUPPORTED (CI lower bound above -margin)"
+        }
+      }
+    },
+    "full": {
+      "overall": {
+        "n": 180,
+        "cost_per_request_usd": 0.00011955372222222222,
+        "total_cost_usd": 0.02151967,
+        "p50_latency_ms": 55.50054999184795,
+        "p95_latency_ms": 2414.4183149794126,
+        "cache_hit_rate": 0.5444444444444444,
+        "quality": 0.7333333333333333,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7555555555555555,
+          "complex": 0.24444444444444444
+        },
+        "escalation_rate_of_simple": 0.16176470588235295,
+        "quality_by_route": {
+          "simple": 0.7794117647058824,
+          "complex": 0.5909090909090909
+        },
+        "false_cache_hits_judged_wrong": 11
+      },
+      "original": {
+        "n": 60,
+        "cost_per_request_usd": 0.00024317033333333334,
+        "total_cost_usd": 0.014590220000000001,
+        "p50_latency_ms": 1397.1575500181643,
+        "p95_latency_ms": 3841.5168100007572,
+        "cache_hit_rate": 0,
+        "quality": 0.7,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7333333333333333,
+          "complex": 0.26666666666666666
+        },
+        "escalation_rate_of_simple": 0.2727272727272727,
+        "quality_by_route": {
+          "simple": 0.7727272727272727,
+          "complex": 0.5
+        },
+        "false_cache_hits_judged_wrong": 0
+      },
+      "paraphrase": {
+        "n": 60,
+        "cost_per_request_usd": 6.61175e-05,
+        "total_cost_usd": 0.00396705,
+        "p50_latency_ms": 35.30010000395123,
+        "p95_latency_ms": 2200.0332400057227,
+        "cache_hit_rate": 0.7833333333333333,
+        "quality": 0.75,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7666666666666667,
+          "complex": 0.23333333333333334
+        },
+        "escalation_rate_of_simple": 0.10869565217391304,
+        "quality_by_route": {
+          "simple": 0.782608695652174,
+          "complex": 0.6428571428571429
+        },
+        "false_cache_hits_judged_wrong": 5
+      },
+      "repeat": {
+        "n": 60,
+        "cost_per_request_usd": 4.937333333333334e-05,
+        "total_cost_usd": 0.0029624,
+        "p50_latency_ms": 35.3017000015825,
+        "p95_latency_ms": 2120.0037200062065,
+        "cache_hit_rate": 0.85,
+        "quality": 0.75,
+        "retrieval_hit_rate": 0.9666666666666667,
+        "route_split": {
+          "simple": 0.7666666666666667,
+          "complex": 0.23333333333333334
+        },
+        "escalation_rate_of_simple": 0.10869565217391304,
+        "quality_by_route": {
+          "simple": 0.782608695652174,
+          "complex": 0.6428571428571429
+        },
+        "false_cache_hits_judged_wrong": 6
+      },
+      "vs_always_large": {
+        "cost_reduction_pct": 50.30240480466721,
+        "p95_latency_change_pct": 35.49470601367464,
+        "p50_latency_change_pct": -93.79730104898951,
+        "quality_delta": {
+          "mean": 0.027777777777777776,
+          "ci95": [
+            0.0,
+            0.06111111111111111
+          ],
+          "n_items": 60,
+          "noninferiority_margin": 0.05,
+          "claim": "no quality drop SUPPORTED (CI lower bound above -margin)"
+        }
+      }
+    }
+  }
+}

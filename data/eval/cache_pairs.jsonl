@@ -1,0 +1,100 @@
+{"id": "p00", "q1": "What is the default port for Redis?", "q2": "Which port does Redis listen on by default?", "should_hit": true}
+{"id": "p01", "q1": "How does a Bloom filter work?", "q2": "Can you explain how Bloom filters work?", "should_hit": true}
+{"id": "p02", "q1": "What does the CAP theorem state?", "q2": "What is stated by the CAP theorem?", "should_hit": true}
+{"id": "p03", "q1": "Who created Git?", "q2": "Who is the creator of Git?", "should_hit": true}
+{"id": "p04", "q1": "What is consistent hashing used for?", "q2": "What is the purpose of consistent hashing?", "should_hit": true}
+{"id": "p05", "q1": "How does Raft elect a leader?", "q2": "What is the leader election process in Raft?", "should_hit": true}
+{"id": "p06", "q1": "What is a vector database?", "q2": "Define vector database.", "should_hit": true}
+{"id": "p07", "q1": "What is retrieval-augmented generation?", "q2": "Explain what RAG (retrieval-augmented generation) is.", "should_hit": true}
+{"id": "p08", "q1": "What is cosine similarity?", "q2": "How is cosine similarity defined?", "should_hit": true}
+{"id": "p09", "q1": "What is a knowledge graph?", "q2": "Can you tell me what a knowledge graph is?", "should_hit": true}
+{"id": "p10", "q1": "How does TLS secure a connection?", "q2": "What does TLS do to secure connections?", "should_hit": true}
+{"id": "p11", "q1": "What is OAuth used for?", "q2": "What is OAuth for?", "should_hit": true}
+{"id": "p12", "q1": "What is a JSON Web Token?", "q2": "Explain JSON Web Tokens.", "should_hit": true}
+{"id": "p13", "q1": "What does role-based access control mean?", "q2": "Define role-based access control.", "should_hit": true}
+{"id": "p14", "q1": "What is multitenancy in software?", "q2": "What does multitenancy mean in software architecture?", "should_hit": true}
+{"id": "p15", "q1": "How does Kubernetes schedule pods?", "q2": "What is the way Kubernetes schedules pods?", "should_hit": true}
+{"id": "p16", "q1": "What is a B-tree?", "q2": "Describe a B-tree.", "should_hit": true}
+{"id": "p17", "q1": "How do hash tables handle collisions?", "q2": "What techniques do hash tables use to deal with collisions?", "should_hit": true}
+{"id": "p18", "q1": "What is MapReduce?", "q2": "Can you describe MapReduce?", "should_hit": true}
+{"id": "p19", "q1": "What is the purpose of a load balancer?", "q2": "Why do we use load balancers?", "should_hit": true}
+{"id": "p20", "q1": "What is a content delivery network?", "q2": "Define a CDN (content delivery network).", "should_hit": true}
+{"id": "p21", "q1": "How does rate limiting work?", "q2": "Explain the mechanism of rate limiting.", "should_hit": true}
+{"id": "p22", "q1": "What is a microservice architecture?", "q2": "Describe microservices architecture.", "should_hit": true}
+{"id": "p23", "q1": "What is gRPC?", "q2": "Can you explain gRPC?", "should_hit": true}
+{"id": "p24", "q1": "What is GraphQL?", "q2": "Tell me what GraphQL is.", "should_hit": true}
+{"id": "p25", "q1": "What is the Transformer architecture in deep learning?", "q2": "Describe the deep learning Transformer architecture.", "should_hit": true}
+{"id": "p26", "q1": "What is BERT?", "q2": "Explain the BERT language model.", "should_hit": true}
+{"id": "p27", "q1": "What is a word embedding?", "q2": "Define word embeddings.", "should_hit": true}
+{"id": "p28", "q1": "What is nearest neighbor search?", "q2": "Explain nearest-neighbor search.", "should_hit": true}
+{"id": "p29", "q1": "What is TF-IDF?", "q2": "How is TF-IDF defined?", "should_hit": true}
+{"id": "p30", "q1": "What is BM25 used for?", "q2": "What is the use of BM25?", "should_hit": true}
+{"id": "p31", "q1": "What is named-entity recognition?", "q2": "Define named entity recognition.", "should_hit": true}
+{"id": "p32", "q1": "What is entity linking?", "q2": "Explain entity linking.", "should_hit": true}
+{"id": "p33", "q1": "What is prompt engineering?", "q2": "Describe what prompt engineering is.", "should_hit": true}
+{"id": "p34", "q1": "What is a graph database?", "q2": "Define graph database.", "should_hit": true}
+{"id": "p35", "q1": "How does Apache Kafka store messages?", "q2": "What is the way Kafka stores messages?", "should_hit": true}
+{"id": "p36", "q1": "What is Apache Spark used for?", "q2": "What is Spark used for?", "should_hit": true}
+{"id": "p37", "q1": "What is Hadoop?", "q2": "Explain what Apache Hadoop is.", "should_hit": true}
+{"id": "p38", "q1": "What does DNS do?", "q2": "What is the function of the Domain Name System?", "should_hit": true}
+{"id": "p39", "q1": "What is the TCP/IP model?", "q2": "Describe the TCP/IP model.", "should_hit": true}
+{"id": "p40", "q1": "What is a relational database?", "q2": "Define a relational database.", "should_hit": true}
+{"id": "p41", "q1": "What is a NoSQL database?", "q2": "Explain NoSQL databases.", "should_hit": true}
+{"id": "p42", "q1": "What is a database index?", "q2": "Explain what an index is in a database.", "should_hit": true}
+{"id": "p43", "q1": "What is Paxos?", "q2": "Can you describe the Paxos algorithm?", "should_hit": true}
+{"id": "p44", "q1": "What is an access-control list?", "q2": "Define access control list (ACL).", "should_hit": true}
+{"id": "p45", "q1": "How does Elasticsearch search documents?", "q2": "What is the way Elasticsearch searches documents?", "should_hit": true}
+{"id": "p46", "q1": "What is Docker used for?", "q2": "What is the use of Docker?", "should_hit": true}
+{"id": "p47", "q1": "What is SQLite?", "q2": "Explain SQLite.", "should_hit": true}
+{"id": "p48", "q1": "What is a cache replacement policy?", "q2": "Explain cache replacement policies.", "should_hit": true}
+{"id": "p49", "q1": "What is question answering in NLP?", "q2": "Describe the question answering task in NLP.", "should_hit": true}
+{"id": "n00", "q1": "What is the default port for Redis?", "q2": "What is the default port for MongoDB?", "should_hit": false}
+{"id": "n01", "q1": "Who created Git?", "q2": "Who created Linux?", "should_hit": false}
+{"id": "n02", "q1": "What does the CAP theorem state?", "q2": "What does the CAP theorem NOT guarantee?", "should_hit": false}
+{"id": "n03", "q1": "How does Raft elect a leader?", "q2": "How does Paxos elect a leader?", "should_hit": false}
+{"id": "n04", "q1": "What is OAuth used for?", "q2": "What is OpenID used for?", "should_hit": false}
+{"id": "n05", "q1": "What is a B-tree?", "q2": "What is a B+ tree?", "should_hit": false}
+{"id": "n06", "q1": "How does Kafka store messages?", "q2": "How does RabbitMQ store messages?", "should_hit": false}
+{"id": "n07", "q1": "What is Apache Spark used for?", "q2": "What is Apache Hadoop used for?", "should_hit": false}
+{"id": "n08", "q1": "What is cosine similarity?", "q2": "What is Euclidean distance?", "should_hit": false}
+{"id": "n09", "q1": "What is BERT?", "q2": "What is GPT?", "should_hit": false}
+{"id": "n10", "q1": "What is TF-IDF?", "q2": "What is BM25?", "should_hit": false}
+{"id": "n11", "q1": "What is a vector database?", "q2": "What is a graph database?", "should_hit": false}
+{"id": "n12", "q1": "What is a relational database?", "q2": "What is a NoSQL database?", "should_hit": false}
+{"id": "n13", "q1": "What is TLS?", "q2": "What is SSL?", "should_hit": false}
+{"id": "n14", "q1": "What is gRPC?", "q2": "What is REST?", "should_hit": false}
+{"id": "n15", "q1": "What is GraphQL?", "q2": "What is gRPC?", "should_hit": false}
+{"id": "n16", "q1": "What is Docker?", "q2": "What is Kubernetes?", "should_hit": false}
+{"id": "n17", "q1": "What is a JSON Web Token?", "q2": "What is an OAuth access token?", "should_hit": false}
+{"id": "n18", "q1": "What is multitenancy?", "q2": "What is multithreading?", "should_hit": false}
+{"id": "n19", "q1": "What is an access-control list?", "q2": "What is role-based access control?", "should_hit": false}
+{"id": "n20", "q1": "How does hash table collision handling work?", "q2": "How does a Bloom filter handle false positives?", "should_hit": false}
+{"id": "n21", "q1": "What is consistent hashing?", "q2": "What is a hash table?", "should_hit": false}
+{"id": "n22", "q1": "What is MapReduce?", "q2": "What is Apache Spark?", "should_hit": false}
+{"id": "n23", "q1": "What is a load balancer?", "q2": "What is a content delivery network?", "should_hit": false}
+{"id": "n24", "q1": "What is rate limiting?", "q2": "What is load shedding?", "should_hit": false}
+{"id": "n25", "q1": "What is named-entity recognition?", "q2": "What is entity linking?", "should_hit": false}
+{"id": "n26", "q1": "What is a knowledge graph?", "q2": "What is a vector database?", "should_hit": false}
+{"id": "n27", "q1": "What is retrieval-augmented generation?", "q2": "What is fine-tuning a language model?", "should_hit": false}
+{"id": "n28", "q1": "What is nearest neighbor search?", "q2": "What is nearest neighbor classification?", "should_hit": false}
+{"id": "n29", "q1": "What is a word embedding?", "q2": "What is a sentence embedding?", "should_hit": false}
+{"id": "n30", "q1": "What is prompt engineering?", "q2": "What is prompt injection?", "should_hit": false}
+{"id": "n31", "q1": "What is Elasticsearch?", "q2": "What is PostgreSQL?", "should_hit": false}
+{"id": "n32", "q1": "What is SQLite?", "q2": "What is PostgreSQL?", "should_hit": false}
+{"id": "n33", "q1": "How do I enable TLS 1.3?", "q2": "How do I disable TLS 1.3?", "should_hit": false}
+{"id": "n34", "q1": "What are the advantages of microservices?", "q2": "What are the disadvantages of microservices?", "should_hit": false}
+{"id": "n35", "q1": "What is the maximum size of a Redis string?", "q2": "What is the maximum size of a Redis list?", "should_hit": false}
+{"id": "n36", "q1": "Does Kafka guarantee ordering within a partition?", "q2": "Does Kafka guarantee ordering across partitions?", "should_hit": false}
+{"id": "n37", "q1": "What is the time complexity of B-tree search?", "q2": "What is the time complexity of B-tree insertion?", "should_hit": false}
+{"id": "n38", "q1": "Is Raft easier to understand than Paxos?", "q2": "Is Paxos easier to understand than Raft?", "should_hit": false}
+{"id": "n39", "q1": "What happened in 2019 for Kubernetes?", "q2": "What happened in 2015 for Kubernetes?", "should_hit": false}
+{"id": "n40", "q1": "What is the first version of Git?", "q2": "What is the latest version of Git?", "should_hit": false}
+{"id": "n41", "q1": "How do I add a user to the database?", "q2": "How do I remove a user from the database?", "should_hit": false}
+{"id": "n42", "q1": "Can a JWT be revoked?", "q2": "Can a JWT be forged?", "should_hit": false}
+{"id": "n43", "q1": "What is the salary band for engineers?", "q2": "What is the salary band for directors?", "should_hit": false}
+{"id": "n44", "q1": "How many days of paid leave do employees get?", "q2": "How many days of sick leave do employees get?", "should_hit": false}
+{"id": "n45", "q1": "Who can access the HR documents?", "q2": "Who can edit the HR documents?", "should_hit": false}
+{"id": "n46", "q1": "What is the cache TTL for answers?", "q2": "What is the cache size limit for answers?", "should_hit": false}
+{"id": "n47", "q1": "What is the capital of France?", "q2": "What is the capital of Germany?", "should_hit": false}
+{"id": "n48", "q1": "How does Spark handle failures?", "q2": "How does Hadoop handle failures?", "should_hit": false}
+{"id": "n49", "q1": "What is the Transformer encoder?", "q2": "What is the Transformer decoder?", "should_hit": false}

@@ -1,0 +1,382 @@
+{
+  "merges": [],
+  "ambiguous": [],
+  "rejection_examples": [
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Canada",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Evan Thomas",
+        "type": "BORN_IN",
+        "target": "Canada"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "David St. Hubbins",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Nigel Tufnel",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "David St. Hubbins",
+        "type": "MEMBER_OF",
+        "target": "Spinal Tap"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Nigel Tufnel",
+        "type": "MEMBER_OF",
+        "target": "Spinal Tap"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Michael McKean",
+        "type": "RELATED_TO",
+        "target": "David St. Hubbins"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Christopher Guest",
+        "type": "RELATED_TO",
+        "target": "Nigel Tufnel"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Jeanine",
+        "type": "SPOUSE_OF",
+        "target": "David St. Hubbins"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Charles Taylor",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Charles Taylor",
+        "type": "MEMBER_OF",
+        "target": "National Patriotic Front of Liberia"
+      }
+    },
+    {
+      "reason": "self_relation",
+      "item": {
+        "source": "MTV Films",
+        "type": "PRODUCED_BY",
+        "target": "MTV Films"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Pacific sleeper sharks",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Greenland shark",
+        "type": "RELATED_TO",
+        "target": "Pacific sleeper sharks"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "December 14, 1881",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "June 29, 1942",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Karl Riddle",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Cloud Lake",
+        "type": "FOUNDED_BY",
+        "target": "Karl Riddle"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Karl Riddle",
+        "type": "EMPLOYED_BY",
+        "target": "West Palm Beach"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Karl Riddle",
+        "type": "RELATED_TO",
+        "target": "Kenyon Riddle"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Palouse River",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Snake River",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Palus",
+        "type": "LOCATED_IN",
+        "target": "Palouse River"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Palus",
+        "type": "LOCATED_IN",
+        "target": "Snake River"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Kapital Entertainment",
+        "type": "ORGANIZATION"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "ABC Studios",
+        "type": "ORGANIZATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "American Housewife",
+        "type": "PRODUCED_BY",
+        "target": "Kapital Entertainment"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "American Housewife",
+        "type": "PRODUCED_BY",
+        "target": "ABC Studios"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "China",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Suanfa tongzong",
+        "type": "RELATED_TO",
+        "target": "China"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Ladislaus I",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Hungarian Duchy",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Kingdom of Hungary",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ladislaus I",
+        "type": "RELATED_TO",
+        "target": "Coloman"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ladislaus I",
+        "type": "RELATED_TO",
+        "target": "\u00c1lmos"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Hungarian Duchy",
+        "type": "PART_OF",
+        "target": "Kingdom of Hungary"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "October 12, 1830",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "January 30, 1910",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "November 7, 1893",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "July 31, 1979",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Argentina",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ennio Bolognini",
+        "type": "BORN_IN",
+        "target": "Argentina"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "1903",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "1992",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "The NeverEnding Story (film)",
+        "type": "WORK"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "The NeverEnding Story (song)",
+        "type": "PART_OF",
+        "target": "The NeverEnding Story (film)"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "The NeverEnding Story (film)",
+        "type": "RELEASED_IN",
+        "target": "1984"
+      }
+    },
+    {
+      "reason": "self_relation",
+      "item": {
+        "source": "Eric Clapton",
+        "type": "AUTHOR_OF",
+        "target": "Eric Clapton"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Bollinger",
+        "type": "MEMBER_OF",
+        "target": "Worcestershire County Cricket Club"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Bollinger",
+        "type": "MEMBER_OF",
+        "target": "Kent County Cricket Club"
+      }
+    }
+  ]
+}

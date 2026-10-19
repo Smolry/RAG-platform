@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+rag.db
+*.db
+data/raw/*
+!data/raw/.gitkeep
+.pytest_cache/

@@ -1,0 +1,12 @@
+# Rule-based router (Project 1). Score = sum of fired signal weights; complex if score >= complex_threshold.
+# STARTING heuristics. Tune on the DEV split of the labeled router set only; report on the TEST split.
+complex_threshold: 2
+long_query_words: 18
+very_long_query_words: 30
+entity_count_threshold: 3
+low_top_score: 0.35        # embedder-dependent (cosine)
+flat_spread: 0.05          # top1 - topK below this => ambiguous retrieval
+weights: {long_query: 1, very_long_query: 1, keyword: 2, many_entities: 1, multi_part: 1, low_top_score: 1, flat_spread: 1}
+keywords: [compare, comparison, versus, vs, why, explain, difference, differences, differ, trade-off, tradeoff,
+           relationship, impact, analyze, analyse, evaluate, summarize, summarise, advantages, disadvantages, pros, cons]
+escalation_phrases: ["i don't know", "i do not know", "cannot find", "not enough information", "no information"]

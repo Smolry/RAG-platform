@@ -1,0 +1,38 @@
+{
+  "n_chunks": 1188,
+  "tenants": [
+    "hotpot"
+  ],
+  "llm_calls_total": 1188,
+  "llm_calls_fresh": 0,
+  "retries": 0,
+  "input_tokens": 447943,
+  "output_tokens": 611453,
+  "indexing_cost_usd": 0.2482088900000002,
+  "fresh_cost_usd": 0.0,
+  "rejections": {
+    "ungrounded_entity": 66,
+    "dangling_relation": 67,
+    "self_relation": 3
+  },
+  "entities_distinct_before_resolution": 8567,
+  "entities_after_resolution": 8567,
+  "merges": 0,
+  "ambiguous": 0,
+  "relations": 8222,
+  "relations_dropped_self_after_merge": 1,
+  "mentions": 11836,
+  "seconds": 28.792465200007427,
+  "resolution_enabled": false,
+  "extraction_model": "ollama/gemma4:31b:cloud",
+  "indexing_cost_usd_per_chunk": 0.00020893004208754227,
+  "llm_backend": "litellm",
+  "embedder_backend": "sentence-transformers",
+  "graph_backend": "neo4j",
+  "NOT_FOR_REPORTING": false,
+  "store_stats": {
+    "chunks": 1193,
+    "entities": 8572,
+    "relations": 8225
+  }
+}

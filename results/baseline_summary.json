@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-16T07:49:04.856307+00:00",
+  "system": "baseline",
+  "n_questions": 60,
+  "n_unvalidated_questions": 0,
+  "eval_set_sha256": "da749abdab058bfe",
+  "config": {
+    "llm_backend": "litellm",
+    "generation_model": "ollama/nemotron-3-nano:30b-cloud",
+    "judge_model": "ollama/gemma4:31b:cloud",
+    "embedder_backend": "sentence-transformers",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_tokens": 500,
+    "chunk_overlap_tokens": 50,
+    "top_k": 5,
+    "qdrant_url": "http://localhost:6333"
+  },
+  "metrics": {
+    "retrieval_hit_rate": 0.9666666666666667,
+    "citation_correctness": 0.7333333333333333,
+    "answer_correctness_llm_judge": 0.7,
+    "p50_latency_ms": 3486.265600004117,
+    "p95_latency_ms": 12098.3919149774,
+    "mean_cost_usd_per_request": 0.00032201833333333335,
+    "total_cost_usd": 0.0193211
+  }
+}

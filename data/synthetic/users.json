@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": "admin@helios",
+    "tenant_id": "helios",
+    "roles": [
+      "admin"
+    ]
+  },
+  {
+    "user_id": "hr@helios",
+    "tenant_id": "helios",
+    "roles": [
+      "hr"
+    ]
+  },
+  {
+    "user_id": "manager@helios",
+    "tenant_id": "helios",
+    "roles": [
+      "manager"
+    ]
+  },
+  {
+    "user_id": "employee@helios",
+    "tenant_id": "helios",
+    "roles": [
+      "employee"
+    ]
+  },
+  {
+    "user_id": "contractor@helios",
+    "tenant_id": "helios",
+    "roles": [
+      "contractor"
+    ]
+  },
+  {
+    "user_id": "admin@borealis",
+    "tenant_id": "borealis",
+    "roles": [
+      "admin"
+    ]
+  },
+  {
+    "user_id": "hr@borealis",
+    "tenant_id": "borealis",
+    "roles": [
+      "hr"
+    ]
+  },
+  {
+    "user_id": "manager@borealis",
+    "tenant_id": "borealis",
+    "roles": [
+      "manager"
+    ]
+  },
+  {
+    "user_id": "employee@borealis",
+    "tenant_id": "borealis",
+    "roles": [
+      "employee"
+    ]
+  },
+  {
+    "user_id": "contractor@borealis",
+    "tenant_id": "borealis",
+    "roles": [
+      "contractor"
+    ]
+  },
+  {
+    "user_id": "admin@cinder",
+    "tenant_id": "cinder",
+    "roles": [
+      "admin"
+    ]
+  },
+  {
+    "user_id": "hr@cinder",
+    "tenant_id": "cinder",
+    "roles": [
+      "hr"
+    ]
+  },
+  {
+    "user_id": "manager@cinder",
+    "tenant_id": "cinder",
+    "roles": [
+      "manager"
+    ]
+  },
+  {
+    "user_id": "employee@cinder",
+    "tenant_id": "cinder",
+    "roles": [
+      "employee"
+    ]
+  },
+  {
+    "user_id": "contractor@cinder",
+    "tenant_id": "cinder",
+    "roles": [
+      "contractor"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "dataset": "HotpotQA distractor/validation",
+  "license": "CC BY-SA 4.0",
+  "n_questions": 120,
+  "n_skipped_missing_gold_paragraph": 0,
+  "n_documents": 1186,
+  "title_text_conflicts": 0,
+  "types": {
+    "comparison": 24,
+    "bridge": 96
+  },
+  "levels": {
+    "hard": 120
+  },
+  "tenant": "hotpot"
+}

@@ -1,0 +1,1881 @@
+{
+  "merges": [
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "south african",
+      "into": "south africa",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.97
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "south korea",
+      "into": "south korean",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.949
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "east riding of yorkshire",
+      "into": "west riding of yorkshire",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.908
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "hindpool retail park",
+      "into": "hindpool retail parks",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.979
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "upper west side",
+      "into": "upper east side",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.924
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "sierra leonean",
+      "into": "sierra leone",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.982
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "australian",
+      "into": "australia",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.961
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "philippine",
+      "into": "philippines",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.959
+    },
+    {
+      "tenant": "hotpot",
+      "type": "LOCATION",
+      "merged": "german",
+      "into": "germany",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.888
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 2009",
+      "into": "february 2008",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.887
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "19th and early 20th centuries",
+      "into": "late 19th and early 20th centuries",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.979
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "sunday december 5 2009",
+      "into": "sunday december 6 2009",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.978
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "september 16 2008",
+      "into": "september 15 2008",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.968
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "september 30 2013",
+      "into": "september 23 2013",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.957
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 15 1994",
+      "into": "december 12 1994",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.979
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 25 2009",
+      "into": "december 25 2006",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.854
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 28 1955",
+      "into": "december 28 1952",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.837
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 31 1994",
+      "into": "december 12 1994",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.98
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 11 1939",
+      "into": "february 10 1939",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.971
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 14 2016",
+      "into": "february 14 2010",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.837
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 17 2010",
+      "into": "february 14 2010",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.964
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 27 2003",
+      "into": "february 25 2003",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.976
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 27 2012",
+      "into": "february 26 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.986
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "november 18 2003",
+      "into": "november 15 2003",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.98
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "september 2 1997",
+      "into": "september 23 1997",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.961
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 1 1937",
+      "into": "december 11 1937",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.973
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 4 2015",
+      "into": "december 4 2011",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.818
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 5 1899",
+      "into": "december 25 1899",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.98
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 5 2008",
+      "into": "february 2008",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.934
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 7 2013",
+      "into": "february 7 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.928
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 7 2015",
+      "into": "february 7 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.857
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 9 1955",
+      "into": "february 9 1954",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.868
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "january 14 2016",
+      "into": "january 14 2014",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.96
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "january 25 2017",
+      "into": "january 25 2015",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.915
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "january 31 2012",
+      "into": "january 13 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.946
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "october 15 2010",
+      "into": "october 15 2005",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "october 24 2008",
+      "into": "october 24 2006",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.914
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "7 january 1986",
+      "into": "27 january 1986",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.96
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "august 16 1935",
+      "into": "august 16 1933",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.86
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "january 1 2013",
+      "into": "january 7 2013",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.931
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "september 2007",
+      "into": "september 2009",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.888
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "16 march 1909",
+      "into": "14 march 1909",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.982
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "21 march 1952",
+      "into": "17 march 1952",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.982
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "21 march 2011",
+      "into": "18 march 2011",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.938
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "23 march 1994",
+      "into": "23 march 1991",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.895
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "26 april 1976",
+      "into": "26 april 1972",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.816
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "27 april 1972",
+      "into": "26 april 1972",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.987
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "august 5 2017",
+      "into": "august 25 2017",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.938
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 1999",
+      "into": "december 1998",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.881
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 2003",
+      "into": "december 9 2003",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.945
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "december 2015",
+      "into": "december 2014",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 1838",
+      "into": "6 february 1838",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.925
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "february 2013",
+      "into": "february 2011",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.863
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "march 17 1967",
+      "into": "march 11 1967",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.966
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "march 17 2012",
+      "into": "march 11 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.926
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "march 20 2012",
+      "into": "march 20 2010",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.925
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "march 26 1973",
+      "into": "march 22 1973",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.983
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "november 1966",
+      "into": "november 1964",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.816
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "6 march 1957",
+      "into": "26 march 1957",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.972
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "january 2017",
+      "into": "january 4 2017",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.933
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "october 2011",
+      "into": "october 3 2011",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.941
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "july 8 2014",
+      "into": "july 18 2014",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.935
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "june 1 2016",
+      "into": "june 15 2016",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.862
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "merged": "201617",
+      "into": "2016 17",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.954
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "western conference",
+      "into": "eastern conference",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.864
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "us army",
+      "into": "u s army",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.979
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "university of wisconsinmadison",
+      "into": "university of wisconsin madison",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.902
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "sierra leone peoples party",
+      "into": "sierra leone people s party",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.988
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "united senior high school",
+      "into": "united junior high school",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.945
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "sheffield wednesday f c",
+      "into": "sheffield wednesday l f c",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.98
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "jazz at lincoln center",
+      "into": "jazz at lincoln center inc",
+      "rule": "corporate_suffix",
+      "embed_sim": 0.984
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "civil defense forces",
+      "into": "civil defence forces",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.968
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "abs cbn corporation",
+      "into": "abs cbn",
+      "rule": "corporate_suffix",
+      "embed_sim": 0.966
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "abs cbn interactive",
+      "into": "abs cbn interactive inc",
+      "rule": "corporate_suffix",
+      "embed_sim": 0.96
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "thurles town f c",
+      "into": "thurles town a f c",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.984
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "u s marine corps",
+      "into": "us marine corps",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.989
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "news limited",
+      "into": "news corporation",
+      "rule": "corporate_suffix",
+      "embed_sim": 0.842
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "merged": "news corp",
+      "into": "news corporation",
+      "rule": "corporate_suffix",
+      "embed_sim": 0.981
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "ahmed tejan kabbah",
+      "into": "ahmad tejan kabbah",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.939
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "nelson rolihlahla mandela",
+      "into": "nelson mandela",
+      "rule": "person_initials",
+      "embed_sim": 0.889
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "dr wernher von braun",
+      "into": "wernher von braun",
+      "rule": "person_initials",
+      "embed_sim": 0.949
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "king magnus barefoot",
+      "into": "magnus barefoot",
+      "rule": "person_initials",
+      "embed_sim": 0.922
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "charles scribner ii",
+      "into": "charles scribner iii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.957
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "charles scribner iv",
+      "into": "charles scribner iii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.922
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "parakrama pandyan i",
+      "into": "parakrama pandyan ii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.934
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "walter dornberger",
+      "into": "walter robert dornberger",
+      "rule": "person_initials",
+      "embed_sim": 0.972
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "davey borozowski",
+      "into": "davey brozowski",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.919
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "norman l buckley",
+      "into": "norman buckley",
+      "rule": "person_initials",
+      "embed_sim": 0.985
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "rafael dos anjos",
+      "into": "rafael souza dos anjos",
+      "rule": "person_initials",
+      "embed_sim": 0.805
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "antonio vivaldi",
+      "into": "antonio lucio vivaldi",
+      "rule": "person_initials",
+      "embed_sim": 0.927
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "benjamin tucker",
+      "into": "benjamin r tucker",
+      "rule": "person_initials",
+      "embed_sim": 0.973
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "henry kissinger",
+      "into": "dr henry kissinger",
+      "rule": "person_initials",
+      "embed_sim": 0.91
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "rasheed wallace",
+      "into": "rasheed abdul sheed wallace",
+      "rule": "person_initials",
+      "embed_sim": 0.838
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "radwan moumneh",
+      "into": "radwan ghazi moumneh",
+      "rule": "person_initials",
+      "embed_sim": 0.885
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "jeb spaulding",
+      "into": "george b jeb spaulding",
+      "rule": "person_initials",
+      "embed_sim": 0.834
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "kevin garnett",
+      "into": "kevin maurice garnett",
+      "rule": "person_initials",
+      "embed_sim": 0.96
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "donald nixon",
+      "into": "donald a nixon",
+      "rule": "person_initials",
+      "embed_sim": 0.955
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "howard zuker",
+      "into": "howard jerrold zuker",
+      "rule": "person_initials",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "john gaughan",
+      "into": "michael john gaughan",
+      "rule": "person_initials",
+      "embed_sim": 0.93
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "joseph momoh",
+      "into": "joseph saidu momoh",
+      "rule": "person_initials",
+      "embed_sim": 0.916
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "ross mathews",
+      "into": "ross matthews",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.864
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "james swan",
+      "into": "colonel james swan",
+      "rule": "person_initials",
+      "embed_sim": 0.837
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PERSON",
+      "merged": "matt jones",
+      "into": "matt l jones",
+      "rule": "person_initials",
+      "embed_sim": 0.959
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "one hundred and one dalmatians",
+      "into": "hundred and one dalmatians",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.983
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "102 dalmatians",
+      "into": "101 dalmatians",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.934
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "national intelligence estimate",
+      "into": "national intelligence estimates",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.986
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "om six organs of admittance",
+      "into": "six organs of admittance",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.939
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "final fantasy x",
+      "into": "final fantasy x 2",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.957
+    },
+    {
+      "tenant": "hotpot",
+      "type": "WORK",
+      "merged": "bloodline",
+      "into": "bloodlines",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.922
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "world war i",
+      "into": "world war ii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.851
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2001 nba all star game",
+      "into": "2000 nba all star game",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "super bowl xxix",
+      "into": "super bowl xix",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.906
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2009 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.82
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2010 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.842
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2011 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.806
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2012 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.859
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2013 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.89
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2014 ncaa division i men s lacrosse championship",
+      "into": "2015 ncaa division i men s lacrosse championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.929
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2010 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.954
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2011 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.926
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2012 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2013 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.924
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2014 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.919
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2015 america east men s lacrosse tournament",
+      "into": "2009 america east men s lacrosse tournament",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.881
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "200910 biathlon world cup individual men",
+      "into": "200910 biathlon world cup individual women",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.842
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "70th venice international film festival",
+      "into": "68th venice international film festival",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.894
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "200809 biathlon world cup pursuit men",
+      "into": "200910 biathlon world cup pursuit women",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.834
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "200910 biathlon world cup pursuit men",
+      "into": "200910 biathlon world cup pursuit women",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.863
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "201011 biathlon world cup pursuit men",
+      "into": "200910 biathlon world cup pursuit women",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.814
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "200910 biathlon world cup relay men",
+      "into": "200910 biathlon world cup relay women",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.841
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "vermont gubernatorial election 2014",
+      "into": "vermont gubernatorial election 2012",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.933
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "197980 wigan athletic f c season",
+      "into": "197879 wigan athletic f c season",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.953
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "200708 wigan athletic f c season",
+      "into": "200607 wigan athletic f c season",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.975
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2009 adcc world championship",
+      "into": "2007 adcc world championship",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.931
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2015 sundance film festival",
+      "into": "2008 sundance film festival",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.855
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2010 nba all star game",
+      "into": "2000 nba all star game",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.812
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2016 nba all star game",
+      "into": "2012 nba all star game",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.802
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "88th academy awards",
+      "into": "85th academy awards",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.929
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "1972 nba draft",
+      "into": "1970 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.915
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "1976 nba draft",
+      "into": "1970 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.877
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "1980 nba draft",
+      "into": "1970 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.894
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "1989 nfl draft",
+      "into": "1978 nfl draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.822
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "1999 nfl draft",
+      "into": "1990 nfl draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.89
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2002 nba draft",
+      "into": "2012 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.854
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2009 nba draft",
+      "into": "2004 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.871
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2011 nba draft",
+      "into": "2012 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.948
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2015 nba draft",
+      "into": "2012 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.899
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2016 nba draft",
+      "into": "2012 nba draft",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.876
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "super bowl vii",
+      "into": "super bowl xvii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.871
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "2005 election",
+      "into": "2002 election",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.852
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "merged": "super bowls",
+      "into": "super bowl",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.946
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "playstation 3",
+      "into": "playstation 2",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.907
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "madden nfl 2001",
+      "into": "madden nfl 2000",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.947
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "madden nfl 2002",
+      "into": "madden nfl 2000",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.945
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "madden nfl 2005",
+      "into": "madden nfl 2000",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.936
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "madden nfl 08",
+      "into": "madden nfl 06",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.932
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "madden nfl 25",
+      "into": "madden nfl 95",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.886
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "playstation 4",
+      "into": "playstation 2",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.903
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "soft drink",
+      "into": "soft drinks",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.97
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "saturn i",
+      "into": "saturn ib",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.861
+    },
+    {
+      "tenant": "hotpot",
+      "type": "PRODUCT",
+      "merged": "sk hwy 3",
+      "into": "sk hwy 39",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.852
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "academy award",
+      "into": "academy awards",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.906
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "state league 3 south east",
+      "into": "state league 2 south east",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.952
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "german shepherd dogs",
+      "into": "german shepherd dog",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.953
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "hillside home school",
+      "into": "hillside home school ii",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.958
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "national route a002",
+      "into": "national route a004",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.952
+    },
+    {
+      "tenant": "hotpot",
+      "type": "OTHER",
+      "merged": "national route 2",
+      "into": "national route 1",
+      "rule": "fuzzy_ratio",
+      "embed_sim": 0.916
+    }
+  ],
+  "ambiguous": [
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "february 2010",
+      "candidates": [
+        "february 2008",
+        "february 2011"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "september 23 1998",
+      "candidates": [
+        "september 12 1998",
+        "september 23 1997"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 4 2016",
+      "candidates": [
+        "november 2 2016",
+        "november 4 2014"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "september 2010",
+      "candidates": [
+        "september 2009",
+        "september 2015"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "april 19 2015",
+      "candidates": [
+        "april 17 2015",
+        "april 19 2005"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "december 2008",
+      "candidates": [
+        "december 7 2008",
+        "december 2004"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "february 2007",
+      "candidates": [
+        "february 2008",
+        "february 2010"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2001",
+      "candidates": [
+        "5 november 2001",
+        "november 2000"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2003",
+      "candidates": [
+        "november 2000",
+        "november 2001"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2005",
+      "candidates": [
+        "november 2010",
+        "november 2000",
+        "november 2001",
+        "november 2003"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2008",
+      "candidates": [
+        "november 2010",
+        "november 2000",
+        "november 2001",
+        "november 2005"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2013",
+      "candidates": [
+        "november 2010",
+        "november 7 2013"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "DATE",
+      "name": "november 2016",
+      "candidates": [
+        "november 2 2016",
+        "november 4 2016",
+        "november 2013"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "ORGANIZATION",
+      "name": "ncaa division i",
+      "candidates": [
+        "ncaa division iii",
+        "ncaa s division i"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "name": "1987 nba draft",
+      "candidates": [
+        "1970 nba draft",
+        "1986 nba draft"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "name": "super bowl xvi",
+      "candidates": [
+        "super bowl xix",
+        "super bowl xxxvi",
+        "super bowl xvii"
+      ]
+    },
+    {
+      "tenant": "hotpot",
+      "type": "EVENT",
+      "name": "apollo 1",
+      "candidates": [
+        "apollo 14",
+        "apollo 11",
+        "apollo 12",
+        "apollo 16"
+      ]
+    }
+  ],
+  "rejection_examples": [
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Canada",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Evan Thomas",
+        "type": "BORN_IN",
+        "target": "Canada"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "David St. Hubbins",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Nigel Tufnel",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "David St. Hubbins",
+        "type": "MEMBER_OF",
+        "target": "Spinal Tap"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Nigel Tufnel",
+        "type": "MEMBER_OF",
+        "target": "Spinal Tap"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Michael McKean",
+        "type": "RELATED_TO",
+        "target": "David St. Hubbins"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Christopher Guest",
+        "type": "RELATED_TO",
+        "target": "Nigel Tufnel"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Jeanine",
+        "type": "SPOUSE_OF",
+        "target": "David St. Hubbins"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Charles Taylor",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Charles Taylor",
+        "type": "MEMBER_OF",
+        "target": "National Patriotic Front of Liberia"
+      }
+    },
+    {
+      "reason": "self_relation",
+      "item": {
+        "source": "MTV Films",
+        "type": "PRODUCED_BY",
+        "target": "MTV Films"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Pacific sleeper sharks",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Greenland shark",
+        "type": "RELATED_TO",
+        "target": "Pacific sleeper sharks"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "December 14, 1881",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "June 29, 1942",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Karl Riddle",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Cloud Lake",
+        "type": "FOUNDED_BY",
+        "target": "Karl Riddle"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Karl Riddle",
+        "type": "EMPLOYED_BY",
+        "target": "West Palm Beach"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Karl Riddle",
+        "type": "RELATED_TO",
+        "target": "Kenyon Riddle"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Palouse River",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Snake River",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Palus",
+        "type": "LOCATED_IN",
+        "target": "Palouse River"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Palus",
+        "type": "LOCATED_IN",
+        "target": "Snake River"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Kapital Entertainment",
+        "type": "ORGANIZATION"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "ABC Studios",
+        "type": "ORGANIZATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "American Housewife",
+        "type": "PRODUCED_BY",
+        "target": "Kapital Entertainment"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "American Housewife",
+        "type": "PRODUCED_BY",
+        "target": "ABC Studios"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "China",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Suanfa tongzong",
+        "type": "RELATED_TO",
+        "target": "China"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Ladislaus I",
+        "type": "PERSON"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Hungarian Duchy",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Kingdom of Hungary",
+        "type": "OTHER"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ladislaus I",
+        "type": "RELATED_TO",
+        "target": "Coloman"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ladislaus I",
+        "type": "RELATED_TO",
+        "target": "\u00c1lmos"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Hungarian Duchy",
+        "type": "PART_OF",
+        "target": "Kingdom of Hungary"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "October 12, 1830",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "January 30, 1910",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "November 7, 1893",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "July 31, 1979",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "Argentina",
+        "type": "LOCATION"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Ennio Bolognini",
+        "type": "BORN_IN",
+        "target": "Argentina"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "1903",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "1992",
+        "type": "DATE"
+      }
+    },
+    {
+      "reason": "ungrounded_entity",
+      "item": {
+        "name": "The NeverEnding Story (film)",
+        "type": "WORK"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "The NeverEnding Story (song)",
+        "type": "PART_OF",
+        "target": "The NeverEnding Story (film)"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "The NeverEnding Story (film)",
+        "type": "RELEASED_IN",
+        "target": "1984"
+      }
+    },
+    {
+      "reason": "self_relation",
+      "item": {
+        "source": "Eric Clapton",
+        "type": "AUTHOR_OF",
+        "target": "Eric Clapton"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Bollinger",
+        "type": "MEMBER_OF",
+        "target": "Worcestershire County Cricket Club"
+      }
+    },
+    {
+      "reason": "dangling_relation",
+      "item": {
+        "source": "Bollinger",
+        "type": "MEMBER_OF",
+        "target": "Kent County Cricket Club"
+      }
+    }
+  ]
+}
