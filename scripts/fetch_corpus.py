@@ -22,6 +22,59 @@ HEADERS = {
 }
 MAX_ATTEMPTS = 3
 
+class FetchError(RuntimeError):
+    """Raised when a Wikipedia response cannot be used."""
+
+
+def page_from_response(
+    response: httpx.Response, title: str
+) -> dict[str, Any]:
+    if response.status_code >= 400:
+        body = response.text[:300].replace("\n", " ")
+        guidance = (
+            " Set WIKIPEDIA_USER_AGENT to identify your application "
+            "and provide a real contact address; if access remains "
+            "blocked, follow Wikimedia's bot-traffic guidance."
+            if response.status_code == 403
+            else ""
+        )
+        raise FetchError(
+            f"Wikipedia returned HTTP {response.status_code} "
+            f"for {title!r}: {body}{guidance}"
+        )
+
+    try:
+        payload: Any = response.json()
+    except ValueError as exc:
+        body = response.text[:300].replace("\n", " ")
+        raise FetchError(
+            f"Wikipedia returned non-JSON response for {title!r} "
+            f"(HTTP {response.status_code}, "
+            f"Content-Type: {response.headers.get('content-type', 'unknown')}): "
+            f"{body}"
+        ) from exc
+
+    if "error" in payload:
+        error = payload["error"]
+        detail = (
+            error.get("info", str(error))
+            if isinstance(error, dict)
+            else str(error)
+        )
+        raise FetchError(
+            f"Wikipedia API error for {title!r}: {detail}"
+        )
+
+    try:
+        page = next(iter(payload["query"]["pages"].values()))
+    except (KeyError, StopIteration, AttributeError, TypeError) as exc:
+        raise FetchError(
+            f"Wikipedia response did not contain a page for {title!r}"
+        ) from exc
+
+    return page
+
+
 
 def fetch_extract(title: str) -> str:
     params = {
@@ -76,19 +129,7 @@ def fetch_extract(title: str) -> str:
                             f"Content-Type: {response.headers.get('content-type', 'unknown')}): {body}"
                         ) from exc
                 else:
-                    if "error" in payload:
-                        raise RuntimeError(f"Wikipedia API error for {title!r}: {payload['error']}")
-                    try:
-                        page = next(iter(payload["query"]["pages"].values()))
-                    except (
-                        KeyError,
-                        StopIteration,
-                        AttributeError,
-                        TypeError,
-                    ) as exc:
-                        raise RuntimeError(
-                            f"Wikipedia response did not contain a page for {title!r}"
-                        ) from exc
+                    page = page_from_response(response, title)
                     return page.get("extract", "")
 
         time.sleep(2**attempt)
