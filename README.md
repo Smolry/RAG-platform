@@ -28,14 +28,24 @@ Alternatively, after installing the demo dependency, run `make demo`. The demo c
 
 ## Results at a glance
 
-These are measurements from the current saved outputs. Baseline and Project 2 used the same 60-question evaluation fingerprint. Project 1 is a four-arm cache/router benchmark; Project 3 compares four retrieval arms on 180 HotpotQA questions.
+The table below consolidates the saved results for every phase and benchmark arm. Baseline and Project 2 used the same 60-question evaluation fingerprint; Project 1 evaluated 60 questions across original, paraphrase, and repeat passes; Project 3 evaluated 180 HotpotQA questions, including a 120-question multi-hop slice. These are individual experiment snapshots, not live service measurements.
 
-| Stage | Evaluation | Main result | Important qualification |
-|---|---|---|---|
-| Baseline | 60 questions | 96.7% retrieval hit, 70.0% LLM-judged answer correctness, 12.10 s p95, $0.000322/request | Citation correctness was 73.3%; judge score is a proxy. |
-| Project 2 | Same 60 questions; separate 840-query security suite | 0 leaks in 840 queries; 100% adversarial pass; 96.7% retrieval hit | One run; the separate 200-query filtered-search timing showed noisy/negative measured overhead. |
-| Project 1 | 60 questions, original/paraphrase/repeat passes | Full arm: $0.00012/request (50.3% below always-large), 54.4% cache hits, quality 0.733 vs 0.706 | Full-arm p95 was 35.5% higher than always-large; cache-only had better p95. Router stress accuracy was only 25%. |
-| Project 3 | 180 questions: 120 multi-hop + 60 single-hop | Hybrid F1 71.1% vs 62.9% vector; multi-hop delta +10.0 points (95% CI +3.3 to +17.0) | One benchmark/configuration; graph indexing cost was $0.2482 for 1,188 chunks. |
+| Phase / experiment | Evaluation | Quality and retrieval | p95 latency | Estimated cost | Key caveat |
+|---|---|---|---:|---:|---|
+| Baseline RAG | 60 questions | Retrieval hit 96.7%; judged answer correctness 70.0%; citation correctness 73.3% | 12.10 s | $0.000322/request | LLM judge is a proxy for human quality. |
+| Project 2: authorization evaluation | Same 60-question set | Retrieval hit 96.7%; judged answer correctness 75.0%; citation correctness 66.7% | 2.82 s | $0.000181/request | Phase-to-phase differences are descriptive, not causal; model and runtime conditions vary. |
+| Project 2: tenant-security suite | 840 adversarial queries | 0 cross-tenant leaks; 100% adversarial pass; 4,200 authorized chunks returned | — | — | Evidence is limited to the tested fixture policies and attack cases; it is not a security proof. |
+| Project 1: always-large | 60 questions × 3 passes | Quality 0.706; retrieval hit 96.7%; cache hit 0% | 1.78 s | $0.000241/request | Reference arm for cache/routing comparisons. |
+| Project 1: routing-only | 60 questions × 3 passes | Quality 0.711; retrieval hit 96.7%; cache hit 0% | 12.02 s | $0.000293/request (+21.7% vs reference) | p95 was 574.8% higher than always-large in this workload. |
+| Project 1: cache-only | 60 questions × 3 passes | Quality 0.711; retrieval hit 96.7%; cache hit 52.8% | 1.34 s | $0.000113/request (-52.9%) | 10 cache hits were judged wrong. |
+| Project 1: cache + routing | 60 questions × 3 passes | Quality 0.733; retrieval hit 96.7%; cache hit 54.4% | 2.41 s | $0.000120/request (-50.3%) | p95 was 35.5% higher than reference; 11 cache hits were judged wrong. |
+| Project 1: router stress set | 12 queries | Accuracy 25.0%; complex-question recall 0/6 | — | — | Missed all six complex questions; the router is a heuristic, not reliable for arbitrary traffic. |
+| Project 3: vector-only | 180 total; 120 multi-hop | Overall F1 62.9%; multi-hop F1 47.0%; multi-hop supporting-fact recall 74.6% | 22.12 s overall; 26.09 s multi-hop | $0.00040 overall; $0.00048 multi-hop | HotpotQA distractor conditions are easier than open-domain retrieval; supporting-fact recall is paragraph-level. |
+| Project 3: vector + rerank | 180 total; 120 multi-hop | Overall F1 69.3%; multi-hop F1 54.7%; multi-hop supporting-fact recall 81.7% | 10.12 s overall; 12.94 s multi-hop | $0.00014 overall; $0.00018 multi-hop | One benchmark/configuration; reranking adds a component whose cost and latency depend on deployment. |
+| Project 3: hybrid GraphRAG | 180 total; 120 multi-hop | Overall F1 71.1%; multi-hop F1 57.0%; multi-hop supporting-fact recall 82.5%; multi-hop ΔF1 vs vector +10.0 points (95% CI +3.3 to +17.0) | 7.89 s overall; 7.89 s multi-hop | $0.00015 overall; $0.00016 multi-hop | Graph indexing was an additional estimated $0.2482 for 1,188 chunks; results do not guarantee production performance. |
+| Project 3: hybrid n-gram | 180 total; 120 multi-hop | Overall F1 68.9%; multi-hop F1 53.8%; multi-hop supporting-fact recall 82.5% | 6.62 s overall; 7.23 s multi-hop | $0.00014 overall; $0.00016 multi-hop | One benchmark/configuration; the overall result is below hybrid GraphRAG in this run. |
+
+Cost values use the repository's sample model price table, not provider invoices. The Project 3 multi-hop table compares vector-only at $0.00048/query and 26.09 s p95 with hybrid GraphRAG at $0.00016/query and 7.89 s p95. See [docs/LIMITATIONS.md](docs/LIMITATIONS.md) and the phase-specific sections below for methodology and further qualifications.
 
 ### Phase 0 — Baseline
 
