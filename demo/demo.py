@@ -5,7 +5,20 @@ from pathlib import Path
 import streamlit as st
 
 
-ROOT = Path(__file__).resolve().parent
+def find_repo_root() -> Path:
+    script_dir = Path(__file__).resolve().parent
+    for candidate in (script_dir, *script_dir.parents):
+        if (candidate / "results" / "baseline_summary.json").is_file() and (
+            candidate / "docs" / "results"
+        ).is_dir():
+            return candidate
+    raise FileNotFoundError(
+        f"Could not find demo artifacts above {script_dir}; expected results/baseline_summary.json "
+        "and docs/results/ in the repository."
+    )
+
+
+ROOT = find_repo_root()
 
 
 @st.cache_data
