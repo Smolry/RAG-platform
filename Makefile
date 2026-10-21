@@ -1,4 +1,4 @@
-.PHONY: hotpot ingest-hotpot singlehop build-graph p3-ablate-resolution p3-eval p3 test-neo4j neo4j-up p1 tune-cache eval-router paraphrases bench dashboard up install corpus ingest-baseline api eval-baseline tenants ingest-tenants test security measure-p2
+.PHONY: hotpot ingest-hotpot singlehop build-graph p3-ablate-resolution p3-eval p3 test-neo4j neo4j-up p1 tune-cache eval-router paraphrases bench dashboard demo up install corpus ingest-baseline api eval-baseline tenants ingest-tenants test security measure-p2
 install:        ; pip install -r requirements.txt
 up:             ; docker compose up -d
 corpus:         ; python -m scripts.fetch_corpus
@@ -17,6 +17,7 @@ eval-router:    ; python -m scripts.eval_router --split dev
 paraphrases:    ; python -m scripts.make_paraphrases
 bench:          ; python -m scripts.run_benchmark --tenant acme --user eval@acme --roles employee --only-validated
 dashboard:      ; streamlit run dashboard/app.py
+demo:           ; streamlit run demo.py
 neo4j-up:       ; docker compose up -d neo4j
 hotpot:         ; python -m scripts.load_hotpotqa --n 120 --seed 7
 ingest-hotpot:  ; python -m scripts.ingest --manifest data/hotpot/manifest.json

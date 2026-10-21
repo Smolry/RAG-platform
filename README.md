@@ -15,6 +15,17 @@ A measured progression from baseline retrieval-augmented generation to multi-ten
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/project1/README.md](docs/project1/README.md), and [docs/project3/README.md](docs/project3/README.md) for design and implementation detail.
 
+## Standalone experiment demo
+
+The public-facing demo reads saved benchmark summaries and charts only. It does not connect to the application database, use request logs, or require the API or vector/graph services to be running.
+
+```powershell
+python -m pip install -r requirements-demo.txt
+streamlit run demo.py
+```
+
+Alternatively, after installing the demo dependency, run `make demo`. The demo covers baseline RAG, the 840-query tenant-security suite, cache/routing trade-offs and router stress limitations, and vector versus hybrid GraphRAG results. It requires the checked-in `results/` summaries and `docs/results/` charts. These are saved experiment outputs, not live traffic or guarantees of production performance.
+
 ## Results at a glance
 
 These are measurements from the current saved outputs. Baseline and Project 2 used the same 60-question evaluation fingerprint. Project 1 is a four-arm cache/router benchmark; Project 3 compares four retrieval arms on 180 HotpotQA questions.
