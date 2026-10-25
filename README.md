@@ -20,8 +20,8 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/project1/README.md](docs
 The public-facing demo reads saved benchmark summaries and charts only. It does not connect to the application database, use request logs, or require the API or vector/graph services to be running.
 
 ```powershell
-python -m pip install -r requirements-demo.txt
-streamlit run demo.py
+python -m pip install -r demo/requirements-demo.txt
+streamlit run demo/demo.py
 ```
 
 Alternatively, after installing the demo dependency, run `make demo`. The demo covers baseline RAG, the 840-query tenant-security suite, cache/routing trade-offs and router stress limitations, and vector versus hybrid GraphRAG results. It requires the checked-in `results/` summaries and `docs/results/` charts. These are saved experiment outputs, not live traffic or guarantees of production performance.
@@ -115,9 +115,13 @@ py -3.10 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
-# Edit .env: set a strong JWT_SECRET and configure the desired provider/model credentials.
+# Edit .env: set JWT_SECRET (generate one: python -c "import secrets; print(secrets.token_urlsafe(48))")
+# and the credentials for the LLM provider you use. Then verify WITHOUT revealing secrets:
+python -m scripts.check_config
 make up
 ```
+
+The API refuses to start with a missing, short, or placeholder `JWT_SECRET` unless `ENVIRONMENT=dev` (see [docs/SECURITY.md](docs/SECURITY.md)).
 
 If PowerShell blocks activation, use the virtual-environment executable directly, for example `.\.venv\Scripts\python.exe -m pytest -q`.
 
@@ -128,11 +132,12 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 cp .env.example .env
-# Edit .env: set a strong JWT_SECRET and configure the desired provider/model credentials.
+# Edit .env: set JWT_SECRET (python -c "import secrets; print(secrets.token_urlsafe(48))") and your provider key.
+python -m scripts.check_config   # reports PRESENT/missing only, never values
 make up
 ```
 
-`make up` starts Qdrant and PostgreSQL. Neo4j is started separately for Project 3.
+`make up` starts Qdrant only. Postgres (`make up-postgres`, needs `POSTGRES_PASSWORD` in `.env`) and Neo4j (`make neo4j-up`, needs `NEO4J_PASSWORD`) are opt-in. The default `DATABASE_URL` is SQLite.
 
 ## Run the phases
 
@@ -150,7 +155,7 @@ make eval-baseline
 make api
 ```
 
-The API docs are at `http://localhost:8000/docs`. The baseline evaluation writes CSV and JSON summaries under `results/`.
+Set `ENABLE_DOCS=true` in `.env` to serve the interactive API docs at `http://localhost:8000/docs` (off by default). The baseline evaluation writes CSV and JSON summaries under `results/`.
 
 ### Project 2 — security
 
@@ -237,24 +242,19 @@ Saved reports and raw summaries are in [`results/`](results/). The four README f
 
 ### PostgreSQL password or port mismatch
 
-Compose publishes PostgreSQL on host port 5433. If ingest reports password authentication failure, first check the database inside the container:
+Postgres is opt-in (`make up-postgres`) and compose publishes it on `127.0.0.1:5433`. Its password comes from `POSTGRES_PASSWORD` in your `.env`; no password is stored in the repository. The role password is applied only when the `pg_data` volume is first created, so if the volume predates this configuration the existing password may differ. Check what is running without printing credentials:
 
 ```powershell
-docker compose exec postgres psql -U rag -d rag -c "SELECT current_user, current_database(), inet_server_addr();"
+docker compose --profile postgres ps
 docker compose port postgres 5432
+python -m scripts.check_config
 ```
 
-The `rag` role password is initialized only when the `pg_data` volume is first created. If the volume predates this configuration, the existing password may differ. A process-level `DATABASE_URL` overrides `.env`; to test the published IPv4 port for one PowerShell session:
+If you must reset the role password, do it interactively so it does not land in shell history or logs (`psql` prompts for it with `\password`):
 
 ```powershell
-$env:DATABASE_URL = "postgresql://rag:rag@127.0.0.1:5433/rag"
-make ingest-baseline
-```
-
-If you can connect locally as `rag` but the in-container password is stale, reset it without deleting database data:
-
-```powershell
-docker compose exec postgres psql -U rag -d rag -c "ALTER ROLE rag WITH PASSWORD 'rag';"
+docker compose exec -it postgres psql -U rag -d rag
+# then at the psql prompt:  \password rag
 ```
 
 ## Further reading

@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import logging
 import time
+from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query
 from pydantic import BaseModel, Field
 
-from app.core.config import Settings, get_settings
+from app.core.config import Settings, assert_serving_security, get_settings, serving_security_problems
 from app.security.auth import AuthError, Principal, verify_token
 from app.services.rag import RAGService
 
@@ -27,7 +28,19 @@ class AclUpdate(BaseModel):
 
 
 def create_app(service: RAGService | None = None, settings: Settings | None = None) -> FastAPI:
-    app = FastAPI(title="RAG Platform", version="0.2.0")
+    boot = service.settings if service is not None else (settings or get_settings())
+
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        # Fail fast: the server refuses to start with a forgeable JWT secret or an unauthenticated mode that
+        # was not explicitly opted into (ENVIRONMENT=dev + ALLOW_UNAUTHENTICATED=true).
+        for w in assert_serving_security(boot):
+            log.warning("config warning (dev only): %s", w)
+        yield
+
+    # Interactive docs and the OpenAPI schema list every route (incl. admin ones): off unless ENABLE_DOCS=true.
+    docs = {} if boot.enable_docs else {"docs_url": None, "redoc_url": None, "openapi_url": None}
+    app = FastAPI(title="RAG Platform", version="0.2.0", lifespan=lifespan, **docs)
     _state: dict = {"service": service}
 
     def get_service() -> RAGService:
@@ -39,15 +52,22 @@ def create_app(service: RAGService | None = None, settings: Settings | None = No
     def cfg() -> Settings:
         return get_service().settings
 
-    def principal(authorization: str | None = Header(default=None), svc: RAGService = Depends(get_service)) -> Principal | None:
-        if svc.settings.system == "baseline":
-            return None  # baseline mode: no auth
+    def principal(authorization: str | None = Header(default=None)) -> Principal | None:
+        # Authenticate BEFORE the (expensive) service exists: an anonymous request must get a cheap 401 and must never
+        # be able to trigger embedder loading or database connections. Uses the same settings the service is built from.
+        errors, _ = serving_security_problems(boot)
+        if errors:  # defence in depth: the lifespan check should already have stopped the server
+            log.error("request refused: unsafe configuration (%d problem(s))", len(errors))
+            raise HTTPException(503, "service misconfigured")
+        if boot.system == "baseline":
+            return None  # baseline mode: no auth (only reachable with ENVIRONMENT=dev + ALLOW_UNAUTHENTICATED=true)
         if not authorization or not authorization.lower().startswith("bearer "):
             raise HTTPException(401, "missing bearer token")
         try:
-            return verify_token(authorization.split(" ", 1)[1], svc.settings.jwt_secret, svc.settings.jwt_algorithm)
+            return verify_token(authorization.split(" ", 1)[1], boot.jwt_secret, boot.jwt_algorithm)
         except AuthError as e:
-            raise HTTPException(401, str(e)) from e
+            log.info("authentication failed")  # reason intentionally not returned to the client
+            raise HTTPException(401, "invalid or expired credentials") from e
 
     def admin(p: Principal | None = Depends(principal)) -> Principal:
         if p is None or "admin" not in p.roles:
@@ -56,7 +76,20 @@ def create_app(service: RAGService | None = None, settings: Settings | None = No
 
     @app.get("/health")
     def health():
+        """Liveness only: the process is up. Touches no dependency and exposes no configuration."""
         return {"status": "ok"}
+
+    @app.get("/ready")
+    def ready():
+        """Readiness: vector store and relational DB answer. Failure detail is logged by type only, never returned."""
+        try:
+            svc = get_service()
+            svc.store.client.collection_exists(svc.store.collection)
+            svc.db.get_corpus_version("__readiness__")
+        except Exception as e:  # noqa: BLE001 - any dependency failure means "not ready"
+            log.warning("readiness check failed: %s", type(e).__name__)
+            raise HTTPException(503, "not ready") from None
+        return {"status": "ready"}
 
     @app.post("/query")
     def query(req: QueryRequest, p: Principal | None = Depends(principal), svc: RAGService = Depends(get_service)):

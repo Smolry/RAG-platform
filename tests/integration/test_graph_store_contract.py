@@ -47,9 +47,11 @@ FILM, DANA, LISBON, PORT = ("t1|WORK:film orbit", "t1|PERSON:dana reed", "t1|LOC
 def _stores():
     out = [pytest.param(lambda: InMemoryGraphStore(), id="memory")]
     uri = os.environ.get("NEO4J_URI")
-    if uri:
+    if uri and not os.environ.get("NEO4J_PASSWORD"):
+        out.append(pytest.param(None, id="neo4j", marks=pytest.mark.skip(reason="set NEO4J_PASSWORD (no default credential in source)")))
+    elif uri:
         def mk():
-            s = Neo4jGraphStore(uri, os.environ.get("NEO4J_USER", "neo4j"), os.environ.get("NEO4J_PASSWORD", "rag-dev-password"))
+            s = Neo4jGraphStore(uri, os.environ.get("NEO4J_USER", "neo4j"), os.environ["NEO4J_PASSWORD"])
             s.ensure_schema(); s.clear_tenant("t1"); s.clear_tenant("t2")
             return s
         out.append(pytest.param(mk, id="neo4j"))

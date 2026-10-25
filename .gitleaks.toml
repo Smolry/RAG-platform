@@ -1,0 +1,9 @@
+# gitleaks configuration: default rules plus ONE documented exception.
+title = "rag-platform gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Generated extraction cache: its `key` field is a SHA-256 hex digest of chunk content, not a credential. Verified in phase 1: 1,188 records, every key is exactly 64 hex characters, records contain only key/raw/usage. Do not widen this list."
+paths = ['''data/processed/extraction_cache\.jsonl''']

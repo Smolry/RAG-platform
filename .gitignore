@@ -7,3 +7,29 @@ rag.db
 data/raw/*
 !data/raw/.gitkeep
 .pytest_cache/
+
+# --- secrets & credentials (never commit) ---
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*serviceaccount*.json
+.secrets/
+secrets/
+.netrc
+
+# --- local state / tooling ---
+venv/
+.venv*/
+qdrant_storage/
+qdrant_local/
+*.log
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.DS_Store

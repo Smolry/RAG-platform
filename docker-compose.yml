@@ -1,22 +1,34 @@
+# Only Qdrant starts by default. Postgres and Neo4j are opt-in profiles so a small laptop is not loaded with
+# services it does not need:
+#   docker compose up -d                            # Qdrant only
+#   docker compose --profile postgres up -d         # + Postgres (needs POSTGRES_PASSWORD in .env)
+#   docker compose --profile graph up -d neo4j      # + Neo4j    (needs NEO4J_PASSWORD in .env)
+# Compose reads .env automatically. No credential is stored in this file. All ports bind to localhost only.
 services:
   qdrant:
-    image: qdrant/qdrant:latest
-    ports: ["6333:6333"]
+    image: qdrant/qdrant:latest      # TODO(phase 2): pin a tested version tag
+    ports: ["127.0.0.1:6333:6333"]
     volumes: ["qdrant_data:/qdrant/storage"]
   postgres:
+    profiles: ["postgres"]
     image: postgres:16
-    environment: {POSTGRES_USER: rag, POSTGRES_PASSWORD: rag, POSTGRES_DB: rag}
-    ports: ["5433:5432"]
+    environment:
+      POSTGRES_USER: rag
+      POSTGRES_DB: rag
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}   # empty => the image refuses to initialise (fails closed)
+    ports: ["127.0.0.1:5433:5432"]
     volumes: ["pg_data:/var/lib/postgresql/data"]
-  neo4j:   # Project 3 only (GraphRAG). Not needed for the baseline, Project 2 or Project 1.
+  neo4j:   # Project 3 only (GraphRAG). Not needed for the baseline, Project 2, Project 1 or DevTrace.
+    profiles: ["graph"]
     image: neo4j:5.26-community
     environment:
-      NEO4J_AUTH: neo4j/rag-dev-password          # must match NEO4J_PASSWORD in .env
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-}       # must match NEO4J_PASSWORD in .env (empty => Neo4j refuses to start)
       NEO4J_server_memory_heap_max__size: 1G
-    ports: ["7474:7474", "7687:7687"]
+    ports: ["127.0.0.1:7474:7474", "127.0.0.1:7687:7687"]
     volumes: ["neo4j_data:/data"]
     healthcheck:
-      test: ["CMD-SHELL", "cypher-shell -u neo4j -p rag-dev-password 'RETURN 1' || exit 1"]
+      # password is taken from the container's own NEO4J_AUTH (neo4j/<password>), not repeated in this file
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${NEO4J_AUTH#neo4j/}\" 'RETURN 1' || exit 1"]
       interval: 10s
       timeout: 10s
       retries: 12

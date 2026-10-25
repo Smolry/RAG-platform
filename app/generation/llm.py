@@ -22,12 +22,21 @@ class LLMClient(Protocol):
 
 
 class LiteLLMClient:
-    """Provider-agnostic via LiteLLM: set llm_model to any LiteLLM model string."""
+    """Provider-agnostic via LiteLLM: set llm_model to any LiteLLM model string.
+
+    Every call is bounded (timeout, output tokens, retries) so a hung provider or a runaway answer cannot stall a
+    request or run up cost. Provider API keys are read by LiteLLM from the environment; they never pass through here."""
+
+    def __init__(self, timeout: float = 60.0, max_tokens: int = 4096, num_retries: int = 2):
+        if timeout <= 0 or max_tokens <= 0 or num_retries < 0:
+            raise ValueError("timeout and max_tokens must be positive, num_retries non-negative")
+        self.timeout, self.max_tokens, self.num_retries = timeout, max_tokens, num_retries
 
     def complete(self, messages: list[dict], model: str, temperature: float = 0.0) -> LLMResult:
         import litellm  # lazy
 
-        r = litellm.completion(model=model, messages=messages, temperature=temperature)
+        r = litellm.completion(model=model, messages=messages, temperature=temperature, timeout=self.timeout,
+                               max_tokens=self.max_tokens, num_retries=self.num_retries)
         u = r.usage
         return LLMResult(r.choices[0].message.content or "", int(u.prompt_tokens), int(u.completion_tokens), model)
 

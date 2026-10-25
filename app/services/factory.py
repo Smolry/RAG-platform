@@ -25,7 +25,8 @@ def build_service(settings: Settings | None = None, llm: LLMClient | None = None
         cache = SemanticCache(store.client, s.cache_collection, s.cache_threshold, s.cache_ttl_seconds)
         cache.ensure(embedder.dim)
         router = RuleRouter.from_yaml(s.routing_config_path)
-    llm = llm or (RecordingLLM() if s.llm_backend == "stub" else LiteLLMClient())
+    llm = llm or (RecordingLLM() if s.llm_backend == "stub" else LiteLLMClient(
+        timeout=s.llm_timeout_seconds, max_tokens=s.llm_max_output_tokens, num_retries=s.llm_max_retries))
     prices = PriceTable.from_yaml(s.models_config_path)
     hybrid = graph = None
     if s.system == "project3":
