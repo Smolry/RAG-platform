@@ -212,3 +212,33 @@ optional deployment and cleanup (Phase 8).
 - **A reproducibility bug I found in my own design:** the first snapshot id hashed only the input bytes and chunker version, so changing the skip list left the id unchanged. It now also hashes the produced chunks, with a regression test.
 - **Version metadata is only what the source states:** release-note sections take version/date from their own heading;
   docs pages are labelled "as of" the pinned release; Pydantic's explicit `version-added` notes are preserved as text.
+
+## 11. Retrieval tools (Phase 3, "Arm B")
+
+What exists: `app/devtrace/retrieval.py` (filtered, ACL-safe search), `tools.py` (three typed tools a workflow may call), `versions.py`
+(version parsing/ranges), `app/evaluation/devtrace/retrieval_metrics.py` (Recall@k, Precision@k, MRR, ...).
+
+Try it on your laptop (needs Qdrant running and a corpus ingested, see section 9; the first run downloads the embedding model):
+
+```powershell
+python -m scripts.devtrace_search "RequestValidationError 422 body" --library fastapi --user-version 0.100.0
+python -m scripts.devtrace_search "what changed" --release-notes --library fastapi --from 0.100.0 --to 0.110.0
+```
+
+Read the output yourself: are the top 5 the pages you would open? That judgement is the real retrieval check. The unit tests use a
+hash embedder, so they prove the *plumbing* (filters, ACLs, versions) and say nothing about semantic quality.
+
+Version semantics (easy to get wrong, so pinned by tests): a release-note range is `from` EXCLUSIVE, `to` INCLUSIVE, always scoped to one
+library. "Fixed in 0.101.0" is therefore relevant to a user on 0.100.0 only after upgrading, and the caveat text says exactly that.
+
+The three tools: `retrieve_docs`, `search_release_notes`, `inspect_sources`. The model supplies only query-like arguments. Tenant, roles,
+collection and limits are server-owned; unknown arguments are *rejected*, not ignored, so a model cannot even try to set them.
+
+### Phase 3 interview notes
+- **Why filter inside the vector search?** A post-filter can return fewer than k results after dropping unauthorized ones, and any bug
+  there leaks. A pre-filter makes unauthorized chunks unreachable; we still re-check after retrieval (defense in depth) and audit violations.
+- **Why integer version keys?** Qdrant range filters need numbers; `major*1e8 + minor*1e4 + patch` keeps ordering exact. Strings sort `0.9` after `0.10`.
+- **Why reject unknown tool arguments?** `extra="forbid"` turns a prompt-injected `{"tenant_id": "other"}` into a visible error instead of a silent no-op.
+- **Why an evidence ledger?** Every passage shown to the model gets a ref (E1..). Later citation validation checks against that set, so a
+  citation to something never retrieved cannot pass.
+- **Bug found by my own test:** `ledger or EvidenceLedger()` discarded a caller's empty ledger, because an empty ledger is falsy. Fixed with `is None`.

@@ -12,6 +12,7 @@ from pathlib import Path
 from qdrant_client import models as qm
 
 from app.core.models import ChunkRecord
+from app.devtrace.versions import version_key
 from app.retrieval.embedder import Embedder
 from app.retrieval.store import VectorStore
 
@@ -26,7 +27,7 @@ def ingest_snapshot(chunks: list[dict], snapshot_id: str, store: VectorStore, em
         raise ValueError("refusing to ingest an empty snapshot")
     roles = allowed_roles if allowed_roles is not None else ["user", "admin"]
     # Fields the SERVER owns. Anything of these names inside the chunk file is ignored, never trusted.
-    server_owned = {"tenant_id", "classification", "allowed_roles", "allowed_users", "corpus_version", "chunk_id", "source_chunk_id"}
+    server_owned = {"version_key", "tenant_id", "classification", "allowed_roles", "allowed_users", "corpus_version", "chunk_id", "source_chunk_id"}
     known = set(ChunkRecord.model_fields) - server_owned
     records = []
     for c in chunks:
@@ -36,7 +37,8 @@ def ingest_snapshot(chunks: list[dict], snapshot_id: str, store: VectorStore, em
         # Qdrant point ids are global to the collection: scope them by tenant so two tenants can hold the same public docs
         # without overwriting each other (the build-time id stays in `source_chunk_id`).
         scoped = str(uuid.uuid5(uuid.NAMESPACE_URL, f"{tenant_id}:{c['chunk_id']}"))
-        records.append(ChunkRecord(**d, chunk_id=scoped, source_chunk_id=c["chunk_id"], tenant_id=tenant_id,
+        vk = version_key(c["library_version"]) if c.get("version_kind") == "introduced_in" and c.get("library_version") else None
+        records.append(ChunkRecord(**d, version_key=vk, chunk_id=scoped, source_chunk_id=c["chunk_id"], tenant_id=tenant_id,
                                    classification="public", allowed_roles=roles, allowed_users=[], corpus_version=snapshot_id))
     store.ensure_collection(embedder.dim)
     for s in range(0, len(records), batch_size):

@@ -66,3 +66,11 @@ Snapshot `976aea99e8507ef2`: FastAPI 0.162.0 and Pydantic 2.14.1 docs/release no
 - **Indexing was tested with the hash embedder only.** Real MiniLM embeddings and retrieval quality are unmeasured until Phase 3/4.
 - **No curated troubleshooting cases or third-party sources yet.** Only official docs.
 - **Chunk text includes a breadcrumb prefix** (`FastAPI | Page > Section`), so exact-quote validation must allow for it.
+
+## DevTrace retrieval (Phase 3)
+- Retrieval *quality* with the real embedding model is **not measured yet**. Tests use a hash embedder; the model could not be downloaded in my
+  build sandbox. Numbers appear only after the Phase 4 evaluation run on real embeddings.
+- Version logic ignores pre-release tags and handles only `major.minor.patch`. Release notes are attributed to the version in their heading;
+  a note without a parsable version cannot be range-filtered.
+- Dedupe is by content hash, so near-duplicate text across pages is kept.
+- Caveats about versions are rule-based wording, not a claim that a given bug affects the user's code.

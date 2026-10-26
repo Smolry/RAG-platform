@@ -7,6 +7,7 @@ from app.core.models import ChunkRecord, RetrievedChunk
 
 KEYWORD_INDEXES = ["tenant_id", "document_id", "allowed_roles", "allowed_users", "classification", "corpus_version",
                    "library", "source_type", "snapshot_id"]
+INTEGER_INDEXES = ["version_key"]
 
 
 def make_client(url: str) -> QdrantClient:
@@ -27,6 +28,10 @@ class VectorStore:
         for field in KEYWORD_INDEXES:  # PDF: payload indexes on tenant_id / allowed_roles keep filtering fast
             self.client.create_payload_index(
                 self.collection, field_name=field, field_schema=models.PayloadSchemaType.KEYWORD
+            )
+        for field in INTEGER_INDEXES:
+            self.client.create_payload_index(
+                self.collection, field_name=field, field_schema=models.PayloadSchemaType.INTEGER
             )
 
     def upsert(self, records: list[ChunkRecord], vectors: list[list[float]]) -> None:

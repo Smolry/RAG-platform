@@ -48,6 +48,19 @@ Added tooling: `python -m scripts.check_config` reports PRESENT/missing for each
 **Residual risk (SSRF):** the IP check and the TCP connect are separate lookups (DNS rebinding). For an allowlisted HTTPS host the
 rebinding target would also need a valid certificate for that hostname, which it cannot obtain. Accepted; no proxy-pinning.
 
+## Controls added in Phase 3 (retrieval tools)
+- Tenant/role filter is built server-side from the verified principal; a guard asserts those conditions survive any extra filter.
+- Second ACL check after retrieval; a violation is dropped and written to the audit log as `acl_violation`.
+- Tool arguments are strict schemas (`extra="forbid"`). Policy fields (tenant, roles, collection, limits, urls) are rejected, and error
+  messages never echo argument values or exception text.
+- Hard budgets in code: total calls, invalid calls, and evidence items. The model cannot raise them.
+- `inspect_sources` opens only refs already in this run's ledger and re-checks authorization live, so revocation applies mid-run.
+- Evidence is rendered inside delimiters with `<<<`/`>>>` neutralized, so document text cannot forge a block boundary. Documents are
+  stored verbatim; the defense is containment, not editing. (Behavioral injection resistance of the LLM is tested in Phase 5.)
+- Audit rows store a sha256 + length of the query, not the query text.
+- The semantic cache is not used on DevTrace paths.
+Tests: `tests/security/test_devtrace_tool_boundary.py`, `tests/unit/test_devtrace_retrieval.py`.
+
 ## Open items (not yet fixed)
 
 | ID | Item | Planned |

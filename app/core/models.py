@@ -31,6 +31,7 @@ class ChunkRecord(BaseModel):
     source_type: str | None = None         # docs | release_notes | migration | errors
     library: str | None = None
     library_version: str | None = None     # see version_kind
+    version_key: int | None = None         # sortable int for release-note entries (see app/devtrace/versions.py); None for docs pages
     version_kind: str | None = None        # "docs_as_of" (page text as of this release) | "introduced_in" (release-note entry)
     published_at: str | None = None        # ISO date taken from the source heading, if present
     fetched_at: str | None = None

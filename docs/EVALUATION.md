@@ -38,3 +38,12 @@ Metrics for caching/routing/GraphRAG (cache hit rate, routing accuracy, EM/F1, s
 | Candidate recall | recall of gold paragraphs in the merged pool **before** rerank | recall of the retrieval stage | separates "not retrieved" from "retrieved but reranked out" |
 | Indexing cost | sum of extraction-call cost (tokens × price table) over all chunks, incl. cached calls; plus fresh-only cost, wall time, rejections, entities before/after resolution, relations | one-time price of the graph | price table is example values; extraction model dependent |
 | ΔF1 / ΔSF vs vector | mean of per-question paired differences, 95% percentile bootstrap CI | whether an arm beats the baseline | 120 questions ⇒ wide CIs; "SUPPORTED" requires the CI lower bound > 0 (improvement) or > −0.05 (no harm) |
+
+## DevTrace retrieval metrics (Phase 3 definitions)
+Implemented in `app/evaluation/devtrace/retrieval_metrics.py`; hand-computed cases in `tests/unit/test_devtrace_retrieval_metrics.py`.
+- **Unit of relevance:** source page/document id, with chunks collapsed to their first-seen document (duplicates cannot inflate scores).
+- **Recall@k** = relevant found in top k / all relevant. **Precision@k** = relevant in top k / k (divides by k even if fewer results returned).
+  **Hit@k**, **MRR** (rank among distinct documents), **source coverage**, **all-required-found@k** for multi-source questions.
+- **Not applicable ≠ zero:** cases with no relevant labels (e.g. must-abstain) return `None` and are excluded from means; the report states n per metric.
+- **Version correctness:** share of version-bearing evidence inside the requested range and library; documentation pages are not judged.
+- No results exist yet. Do not quote any figure from this project until a saved run artifact (Phase 4+) backs it.
