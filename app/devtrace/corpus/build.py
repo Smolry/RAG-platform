@@ -1,8 +1,8 @@
 """Corpus build: pinned sources + fetched files -> chunks + a reproducible manifest.
 
 Inputs are explicit (file lists pinned to a 40-hex commit SHA), so there is no crawling and no URL is ever derived from
-user input. `snapshot_id` hashes the exact bytes of every file plus the chunker parameters: the same snapshot_id means
-the same chunks, ids and hashes.
+user input. `snapshot_id` hashes the exact bytes of every file, the chunker parameters AND the resulting chunks: the same
+snapshot_id means the same chunks, ids and hashes (a behaviour change in chunking changes the id).
 """
 from __future__ import annotations
 
@@ -82,7 +82,9 @@ def build_file_chunks(src: dict, f: dict, text: str, fetched_at: str, snapshot_i
     out: list[dict] = []
     dup: dict[str, int] = {}
     dropped = oversize = 0
-    for c in chunk_markdown(text, max_words=max_words, prefix=f"{src['display']} | "):
+    # Label only (not a source fact): explicit `title` from config, else the page's own file name, humanised.
+    page_label = f.get("title") or f["url_path"].strip("/").split("/")[-1].replace("_", " ").replace("-", " ").capitalize()
+    for c in chunk_markdown(text, max_words=max_words, prefix=f"{src['display']} | ", root_title=page_label):
         version, published, vkind = src["ref"], None, "docs_as_of"
         if is_release:
             m = next((RELEASE_HEADING.match(p) for p in c.section_path if RELEASE_HEADING.match(p)), None)
@@ -112,10 +114,16 @@ def build_file_chunks(src: dict, f: dict, text: str, fetched_at: str, snapshot_i
     return out, {"chunks": len(out), "dropped_sections": dropped, "oversize_chunks": oversize}
 
 
-def compute_snapshot_id(file_hashes: dict[str, str], max_words: int) -> str:
+def compute_snapshot_id(file_hashes: dict[str, str], max_words: int, chunk_digests: list[tuple[str, str]] | None = None) -> str:
+    """Identity of the corpus snapshot = exact source bytes + chunker parameters + the chunks they produced.
+
+    Hashing the OUTPUT (chunk id + content hash) as well as the inputs means that any change in chunking behaviour,
+    skip lists or version filters changes the id, even if the source bytes and CHUNKER_VERSION did not."""
     h = hashlib.sha256(f"chunker={CHUNKER_VERSION};max_words={max_words}\n".encode())
     for k in sorted(file_hashes):
         h.update(f"{k}={file_hashes[k]}\n".encode())
+    for cid, ch in sorted(chunk_digests or []):
+        h.update(f"{cid}:{ch}\n".encode())
     return h.hexdigest()[:16]
 
 
@@ -129,12 +137,11 @@ def build_corpus(cfg: dict, get_text: Callable[[dict, dict], FetchResult], max_w
     """`get_text(src, file)` supplies each file (network fetch or local cache). Two passes: hash everything first so the
     snapshot_id can be stamped into every chunk."""
     fetched: list[tuple[dict, dict, FetchResult]] = [(s, f, get_text(s, f)) for s in cfg["sources"] for f in s["files"]]
-    snapshot_id = compute_snapshot_id({f"{s['id']}:{s['commit']}:{f['path']}": r.sha256 for s, f, r in fetched}, max_words)
     chunks: list[dict] = []
     files_meta = []
     seen: set[str] = set()
     for s, f, r in fetched:
-        cs, st = build_file_chunks(s, f, r.text, r.fetched_at, snapshot_id, max_words)
+        cs, st = build_file_chunks(s, f, r.text, r.fetched_at, None, max_words)   # snapshot id is computed from these, then stamped
         for c in cs:
             if c["chunk_id"] in seen:
                 raise SourceConfigError(f"duplicate chunk id in {c['document_id']} ({c['section_path']})")
@@ -144,6 +151,10 @@ def build_corpus(cfg: dict, get_text: Callable[[dict, dict], FetchResult], max_w
         chunks += cs
         files_meta.append({"source_id": s["id"], "path": f["path"], "url": raw_url(s, f["path"]), "bytes": r.n_bytes,
                            "sha256": r.sha256, "fetched_at": r.fetched_at, **st})
+    snapshot_id = compute_snapshot_id({f"{s['id']}:{s['commit']}:{f['path']}": r.sha256 for s, f, r in fetched}, max_words,
+                                      [(c["chunk_id"], c["content_hash"]) for c in chunks])
+    for c in chunks:
+        c["snapshot_id"] = snapshot_id
     manifest = {
         "snapshot_id": snapshot_id, "chunker_version": CHUNKER_VERSION, "max_words": max_words,
         "totals": {"files": len(files_meta), "chunks": len(chunks),

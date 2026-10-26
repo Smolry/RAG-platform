@@ -108,3 +108,13 @@ def test_pydantic_version_admonitions_survive_as_searchable_text():
     md = "# Fields\n\n/// version-added | v2.11\n///\n\nText about `foo`.\n\n/// deprecated-removed | v2.11 v3\nOld thing.\n///\n"
     out = clean_markdown(md)
     assert "Version-added: v2.11" in out and "Deprecated-removed: v2.11 v3" in out and "///" not in out and "Old thing." in out
+
+
+def test_pages_without_h1_get_a_fallback_label_and_an_explicit_h1_replaces_it():
+    no_h1 = "Intro text before any heading.\n\n## `arguments_type`\n\nDetails.\n"
+    ch = chunk_markdown(no_h1, root_title="Validation errors")
+    assert [c.section_path for c in ch] == [["Validation errors"], ["Validation errors", "`arguments_type`"]]
+    assert ch[0].text.startswith("Validation errors\n\nIntro")
+    with_h1 = chunk_markdown("# Real Title\n\ntext\n", root_title="Fallback")
+    assert with_h1[0].section_path == ["Real Title"]
+    assert all(c.section_path for c in chunk_markdown(no_h1, root_title="X"))

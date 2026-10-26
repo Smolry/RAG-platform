@@ -262,3 +262,15 @@ def test_release_subsections_on_the_skip_list_are_dropped_not_hidden():
     assert [c["section_heading"] for c in chunks] == ["Fixes"] and stats["dropped_sections"] >= 2
     kept, _ = build_file_chunks(SRC, REL_FILE, md, "t", "s")                    # without the config nothing is silently dropped
     assert {"Translations", "Internal", "Fixes"} <= {c["section_heading"] for c in kept}
+
+
+def test_snapshot_id_changes_when_chunking_behaviour_changes_even_if_bytes_do_not():
+    """Regression: the id used to hash only file bytes + params, so a changed skip list left it unchanged."""
+    texts = {REL_FILE["path"]: RELEASES + "\n### Translations\n\n* x\n"}
+    # put the Translations subsection under a kept release so the skip list actually matters
+    texts[REL_FILE["path"]] = RELEASES.replace("### Breaking Changes", "### Translations\n\n* Add Klingon.\n\n### Breaking Changes")
+    plain = build_corpus(_cfg([REL_FILE]), _fetcher(texts))
+    skipping = build_corpus(_cfg([{**REL_FILE, "skip_headings": ["Translations"]}]), _fetcher(texts))
+    assert plain.manifest["snapshot_id"] != skipping.manifest["snapshot_id"]
+    assert len(plain.chunks) > len(skipping.chunks)
+    assert {c["snapshot_id"] for c in skipping.chunks} == {skipping.manifest["snapshot_id"]}

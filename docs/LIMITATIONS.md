@@ -52,3 +52,17 @@ The repository now contains non-stub measurements for the four phases. They are 
 4. Add migrations, identity lifecycle, secret rotation, and production retention/observability controls.
 5. Add incremental graph updates and automated vector/graph consistency checks.
 6. Repeat GraphRAG and resolution-ablation runs with controlled model settings, broader corpora, and the live Neo4j contract suite.
+
+## DevTrace corpus (Phase 2)
+
+Snapshot `976aea99e8507ef2`: FastAPI 0.162.0 and Pydantic 2.14.1 docs/release notes, 38 files, 1,103 chunks, 920 sections (your original spec said ~100-300; scope was approved at full size on 2026-10-26 because a tiny corpus makes retrieval trivially easy).
+
+- **Code samples are missing from FastAPI tutorial pages.** They are `{* file.py *}` includes whose code lives outside `docs/`; the include lines are dropped, not resolved. Prose that refers to "the code above" may have nothing above it.
+- **Docs pages are versioned "as of" the pinned release only** (FastAPI 0.162.0, Pydantic 2.14.1). A page does not say when each statement became true. Applicability comes only from release-note entries (dated by their heading) and Pydantic's explicit `version-added`/`version-changed` notes, which are currently preserved as text, not parsed into fields.
+- **Release-note subsections `Internal`, `Translations`, `Docs`, `New Contributors` are excluded** (configured in `sources.yaml`). A relevant fix reported under `Docs` would be missed.
+- **Release history starts at FastAPI 0.100.0 and Pydantic 2.0.0**; stable releases only, no pre-releases. Older questions will correctly find nothing.
+- **24 oversize chunks** (long code blocks or PR lists, up to 765 words) exceed the embedder's ~256-token window; only their beginning is represented in the embedding.
+- **Public links are derived** from file paths and checked against each project's site config (nav and `site_url`), not fetched one by one. `provenance_url` (pinned raw URL) is the exact, reliable reference.
+- **Indexing was tested with the hash embedder only.** Real MiniLM embeddings and retrieval quality are unmeasured until Phase 3/4.
+- **No curated troubleshooting cases or third-party sources yet.** Only official docs.
+- **Chunk text includes a breadcrumb prefix** (`FastAPI | Page > Section`), so exact-quote validation must allow for it.

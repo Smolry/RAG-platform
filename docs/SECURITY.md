@@ -40,7 +40,7 @@ Added tooling: `python -m scripts.check_config` reports PRESENT/missing for each
 | Resource exhaustion | Hard byte cap enforced while streaming (a false `Content-Length` does not help), connect/read timeouts, sequential requests with a minimum interval | tests |
 | Hostile content | Text content types and strict UTF-8 only; downloaded text is data: never executed, rendered or used to choose URLs; prompt-injection text inside documents is stored verbatim (handled at generation/validation time, Phase 5) | tests |
 | Secret/detail leakage | Errors carry status code or exception *type* only, never bodies, headers or URLs from exceptions | tests |
-| Source tampering / drift | Commit-SHA pins (tags rejected), per-file SHA-256 in the manifest, cache integrity check on read, `--verify` | tests |
+| Source tampering / drift | Commit-SHA pins (tags rejected), per-file SHA-256 in the manifest, cache integrity check on read, `--verify`; snapshot id also hashes the produced chunks | tests; independent re-fetch gave the identical id and all 38 files byte-equal to a separate `git` checkout |
 | Tenant spoofing via data files | `tenant_id`, `allowed_*`, `classification`, `corpus_version`, `chunk_id` in a chunk file are ignored; the ingest call supplies them | `test_acl_comes_from_the_call_not_from_chunk_data` (found a real bug first) |
 | Cross-tenant overwrite | Qdrant point ids scoped by tenant | `test_same_public_corpus_in_two_tenants_does_not_collide` (found a real bug first) |
 | Dependency drift / advisories | `requirements-test.lock` (verified: fresh install, full suite green, `pip-audit` clean). This cleared the 3 `filelock` advisories from Phase 1 by moving to filelock 4.2.4 | audit output |

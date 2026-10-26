@@ -80,10 +80,13 @@ def clean_markdown(md: str) -> str:
     return "\n".join(out)
 
 
-def split_sections(md: str, split_level: int = SPLIT_LEVEL) -> list[Section]:
-    """Split cleaned markdown at headings of level <= split_level. Deeper headings stay in the body."""
+def split_sections(md: str, split_level: int = SPLIT_LEVEL, root_title: str | None = None) -> list[Section]:
+    """Split cleaned markdown at headings of level <= split_level. Deeper headings stay in the body.
+
+    `root_title` is a fallback page label for documents without a top-level `# Title` (e.g. Pydantic's docs, whose site
+    derives titles from navigation config). An explicit h1 replaces it; h2/h3 nest under it."""
     sections: list[Section] = []
-    stack: list[tuple[int, str]] = []
+    stack: list[tuple[int, str]] = [(1, root_title)] if root_title else []
     anchor: str | None = None
     body: list[str] = []
     fence: str | None = None
@@ -174,5 +177,5 @@ def chunk_section(sec: Section, max_words: int = DEFAULT_MAX_WORDS, prefix: str 
             for i, (parts, over) in enumerate(packs)]
 
 
-def chunk_markdown(md: str, max_words: int = DEFAULT_MAX_WORDS, prefix: str = "") -> list[Chunk]:
-    return [c for s in split_sections(clean_markdown(md)) for c in chunk_section(s, max_words, prefix)]
+def chunk_markdown(md: str, max_words: int = DEFAULT_MAX_WORDS, prefix: str = "", root_title: str | None = None) -> list[Chunk]:
+    return [c for s in split_sections(clean_markdown(md), root_title=root_title) for c in chunk_section(s, max_words, prefix)]

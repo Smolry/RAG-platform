@@ -1,0 +1,453 @@
+{
+  "snapshot_id": "976aea99e8507ef2",
+  "chunker_version": "md-1",
+  "max_words": 180,
+  "totals": {
+    "files": 38,
+    "chunks": 1103,
+    "oversize_chunks": 24
+  },
+  "sources": [
+    {
+      "id": "fastapi",
+      "library": "fastapi",
+      "repo": "fastapi/fastapi",
+      "commit": "7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4",
+      "ref": "0.162.0",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2018 Sebastián Ramírez",
+      "docs_base_url": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "id": "pydantic",
+      "library": "pydantic",
+      "repo": "pydantic/pydantic",
+      "commit": "b2212c787fb5c73386dc770681ec49cd09da8e73",
+      "ref": "2.14.1",
+      "license": "MIT",
+      "copyright": "Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors",
+      "docs_base_url": "https://docs.pydantic.dev/latest/"
+    }
+  ],
+  "files": [
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md",
+      "bytes": 6323,
+      "sha256": "299211edb22182d36aefa523589ab1bce7bfe1d7c40743547175dd9dc9a76e11",
+      "fetched_at": "2026-10-26T02:45:33+00:00",
+      "chunks": 9,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/body.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/body.md",
+      "bytes": 6611,
+      "sha256": "1a3e0f7b9220dcee9a7379c999d57b49e126ed07725dbbc5566ee1278d4ec670",
+      "fetched_at": "2026-10-26T02:45:34+00:00",
+      "chunks": 11,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/body-fields.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/body-fields.md",
+      "bytes": 2417,
+      "sha256": "c826ba83421489edb760ea62f8e3891f18dfd658fe2d7be2f26cc5598447f251",
+      "fetched_at": "2026-10-26T02:45:34+00:00",
+      "chunks": 5,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/body-nested-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/body-nested-models.md",
+      "bytes": 6818,
+      "sha256": "87c1ff04f9dc7c885be837cb992ebdf695907eecd9acc929faa1b7a184120f48",
+      "fetched_at": "2026-10-26T02:45:34+00:00",
+      "chunks": 15,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/body-multiple-params.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/body-multiple-params.md",
+      "bytes": 4932,
+      "sha256": "be8df903354461511052ae4bb75665268747039ab64d3fe872124870f7f09280",
+      "fetched_at": "2026-10-26T02:45:35+00:00",
+      "chunks": 8,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/query-params.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/query-params.md",
+      "bytes": 4886,
+      "sha256": "260a8599062431557dda2c3b535d5b49a3b6b7d71c3ce680fad3ade1dfe1eb86",
+      "fetched_at": "2026-10-26T02:45:35+00:00",
+      "chunks": 7,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/query-params-str-validations.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/query-params-str-validations.md",
+      "bytes": 17098,
+      "sha256": "e783acbc1d41e1fc5f7dc0babaf812bca995b1db6618022e2df5545798c1650b",
+      "fetched_at": "2026-10-26T02:45:36+00:00",
+      "chunks": 25,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/path-params.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/path-params.md",
+      "bytes": 9041,
+      "sha256": "81e09015b7a5c40e460eca9939da240a66f8a9efd88ad21c7992146337426fea",
+      "fetched_at": "2026-10-26T02:45:36+00:00",
+      "chunks": 17,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/path-params-numeric-validations.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/path-params-numeric-validations.md",
+      "bytes": 6207,
+      "sha256": "149a8e36ede2dc1341eb4d403c24c75392be6829c4b4e731e84bf3e6c0200f6f",
+      "fetched_at": "2026-10-26T02:45:37+00:00",
+      "chunks": 10,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/query-param-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/query-param-models.md",
+      "bytes": 4359,
+      "sha256": "337adea1c09d14945a4245f5b88407306cdcde445a33e972f7a65ef09e7ae2b7",
+      "fetched_at": "2026-10-26T02:45:37+00:00",
+      "chunks": 7,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/header-param-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/header-param-models.md",
+      "bytes": 4148,
+      "sha256": "98139ea099dad1d5872fea63cf685713fc6a41d9161122ae241d48f581c21cd8",
+      "fetched_at": "2026-10-26T02:45:38+00:00",
+      "chunks": 8,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/cookie-param-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/cookie-param-models.md",
+      "bytes": 4253,
+      "sha256": "b6dc2cf33e9cbee9892882953d6b8ddac55937fb664fed320e55f79fa82d57a3",
+      "fetched_at": "2026-10-26T02:45:38+00:00",
+      "chunks": 8,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/request-forms.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/request-forms.md",
+      "bytes": 3073,
+      "sha256": "10729647a5c008d37bd0483b45ac99cbf6c52858ac5a227dfe02fe36d571d9d5",
+      "fetched_at": "2026-10-26T02:45:39+00:00",
+      "chunks": 6,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/request-form-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/request-form-models.md",
+      "bytes": 4830,
+      "sha256": "a43425a4ae5265230a5d08fb73a2e251d1fe9c3ca5fcc9107d55fe90013654eb",
+      "fetched_at": "2026-10-26T02:45:39+00:00",
+      "chunks": 10,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/response-model.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/response-model.md",
+      "bytes": 15890,
+      "sha256": "1cb51565cc693ee12e8f9cb6bfeefdab18bc010457274a4d55836474a1bb04ee",
+      "fetched_at": "2026-10-26T02:45:39+00:00",
+      "chunks": 23,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/extra-models.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/extra-models.md",
+      "bytes": 6868,
+      "sha256": "4c2302ff5c331ad0857a93f813f1a699b948476cc80e4bbc9bbea4484f3d5219",
+      "fetched_at": "2026-10-26T02:45:40+00:00",
+      "chunks": 10,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/handling-errors.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/handling-errors.md",
+      "bytes": 9156,
+      "sha256": "c0cb7aeafe8ed3802396f2421755cf1e740000347305c515a2c828c0c41f4b1a",
+      "fetched_at": "2026-10-26T02:45:40+00:00",
+      "chunks": 12,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/schema-extra-example.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/schema-extra-example.md",
+      "bytes": 8970,
+      "sha256": "1bc9e50ddfa28bc8c6057ebdeafafae8069ab9d05e2a1674555122ede3a263a0",
+      "fetched_at": "2026-10-26T02:45:41+00:00",
+      "chunks": 16,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/dependencies/index.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/dependencies/index.md",
+      "bytes": 9771,
+      "sha256": "83319cc87297bb0959c5721a112133e6a3cd19900163c348a8ee6cf4818cd21f",
+      "fetched_at": "2026-10-26T02:45:41+00:00",
+      "chunks": 14,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/tutorial/response-status-code.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/tutorial/response-status-code.md",
+      "bytes": 3994,
+      "sha256": "44c62f134437997178668480503cc1cdfc55b45367ce8a66beff89c839aa896a",
+      "fetched_at": "2026-10-26T02:45:42+00:00",
+      "chunks": 6,
+      "dropped_sections": 0,
+      "oversize_chunks": 1
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/advanced/settings.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/advanced/settings.md",
+      "bytes": 11816,
+      "sha256": "e25439be1e4468a444757378f4b65de038867df9bf969e1ddf64460dc3e8f79f",
+      "fetched_at": "2026-10-26T02:45:42+00:00",
+      "chunks": 20,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "fastapi",
+      "path": "docs/en/docs/release-notes.md",
+      "url": "https://raw.githubusercontent.com/fastapi/fastapi/7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4/docs/en/docs/release-notes.md",
+      "bytes": 727516,
+      "sha256": "e84bfe8ed732c591b5b113545eedefaf624cfe15c04577a644393be0748cb388",
+      "fetched_at": "2026-10-26T02:45:43+00:00",
+      "chunks": 249,
+      "dropped_sections": 553,
+      "oversize_chunks": 2
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/migration.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/migration.md",
+      "bytes": 49971,
+      "sha256": "9bf17e8ea8a85b05dbbaccc710f35f30eac8c43dbdc889a3e715b65aa19599ac",
+      "fetched_at": "2026-10-26T02:45:43+00:00",
+      "chunks": 43,
+      "dropped_sections": 0,
+      "oversize_chunks": 3
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/version-policy.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/version-policy.md",
+      "bytes": 6635,
+      "sha256": "08250a1f910b862b9c2349ce21dd4aa8d67e8b41aa32d5fe89acb9fa988335b7",
+      "fetched_at": "2026-10-26T02:45:44+00:00",
+      "chunks": 11,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/models.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/models.md",
+      "bytes": 61790,
+      "sha256": "d1fc931d483369c42569b17f68ca4b410300d0d3893ca695fc624966110c9d7d",
+      "fetched_at": "2026-10-26T02:45:44+00:00",
+      "chunks": 55,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/validators.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/validators.md",
+      "bytes": 30386,
+      "sha256": "4bb6b1785213d6e26b390bb71cba0c122a407769885f32549c3ead69c8e39ddc",
+      "fetched_at": "2026-10-26T02:45:44+00:00",
+      "chunks": 23,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/fields.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/fields.md",
+      "bytes": 27984,
+      "sha256": "db2427e9e666f48509cc3b199395c4b6d88c07700335f18ba7121cd32c14fc1a",
+      "fetched_at": "2026-10-26T02:45:45+00:00",
+      "chunks": 29,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/config.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/config.md",
+      "bytes": 7003,
+      "sha256": "b7feb6acd6eac55c23979954f0332c4ad59dd1f8b65a66ec8f0502cad9f5f422",
+      "fetched_at": "2026-10-26T02:45:45+00:00",
+      "chunks": 9,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/json_schema.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/json_schema.md",
+      "bytes": 36052,
+      "sha256": "b73f99821b9ac177a8d9d534d59c4ebb4ac2afc322ed57da606787dceb0b4440",
+      "fetched_at": "2026-10-26T02:45:46+00:00",
+      "chunks": 34,
+      "dropped_sections": 0,
+      "oversize_chunks": 1
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/types.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/types.md",
+      "bytes": 32512,
+      "sha256": "d2d1dac6e9300634978c675d4ac13bf67bb5d33c2cf4e65292f9ca3e845ed009",
+      "fetched_at": "2026-10-26T02:45:46+00:00",
+      "chunks": 25,
+      "dropped_sections": 0,
+      "oversize_chunks": 2
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/unions.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/unions.md",
+      "bytes": 22566,
+      "sha256": "5b1e65ced2a072abc6fa12418d7a60bf2f3df5a0f827986bd8b45bf705d9feb1",
+      "fetched_at": "2026-10-26T02:45:47+00:00",
+      "chunks": 21,
+      "dropped_sections": 0,
+      "oversize_chunks": 1
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/serialization.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/serialization.md",
+      "bytes": 33174,
+      "sha256": "4b58dd2e8a62bb123f0e4c253fb8630ba67edcd38821dfca09a1d03a47beac26",
+      "fetched_at": "2026-10-26T02:45:47+00:00",
+      "chunks": 35,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/strict_mode.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/strict_mode.md",
+      "bytes": 6309,
+      "sha256": "ba862d10c09759f6f339856a03167c3efb0b1555d55078df330b41068891f9c1",
+      "fetched_at": "2026-10-26T02:45:48+00:00",
+      "chunks": 6,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/conversion_table.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/conversion_table.md",
+      "bytes": 482,
+      "sha256": "d599331ebabb99675c70492545bfc56d622ca7ea24e4d3fa9ddee92f51f47aa2",
+      "fetched_at": "2026-10-26T02:45:48+00:00",
+      "chunks": 1,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/concepts/forward_annotations.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/concepts/forward_annotations.md",
+      "bytes": 4373,
+      "sha256": "2aa851409bd1e1f368cc5845ea1be68f0a54aaafc8736dc5a91a599d3d238341",
+      "fetched_at": "2026-10-26T02:45:49+00:00",
+      "chunks": 5,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/errors/validation_errors.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/errors/validation_errors.md",
+      "bytes": 48073,
+      "sha256": "efb04a139c075f81a62b321a7ae583410a30f1fb533378c3d58ce9d0ab1e8187",
+      "fetched_at": "2026-10-26T02:45:49+00:00",
+      "chunks": 111,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "docs/errors/usage_errors.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/docs/errors/usage_errors.md",
+      "bytes": 36287,
+      "sha256": "3988999170bb55195f7e8281bd5180f3ae979f094a8afdec5ff3f24d6e057c54",
+      "fetched_at": "2026-10-26T02:45:49+00:00",
+      "chunks": 55,
+      "dropped_sections": 0,
+      "oversize_chunks": 0
+    },
+    {
+      "source_id": "pydantic",
+      "path": "HISTORY.md",
+      "url": "https://raw.githubusercontent.com/pydantic/pydantic/b2212c787fb5c73386dc770681ec49cd09da8e73/HISTORY.md",
+      "bytes": 342000,
+      "sha256": "588960e3737a000b60193b368a01ecfbccab68c04e02dfd80ad7d1fae2181ba9",
+      "fetched_at": "2026-10-26T02:45:50+00:00",
+      "chunks": 144,
+      "dropped_sections": 208,
+      "oversize_chunks": 14
+    }
+  ],
+  "reproduce": "python -m scripts.fetch_devtrace_corpus --verify  (re-fetches pinned commits; snapshot_id must match)"
+}

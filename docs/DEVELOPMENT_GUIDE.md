@@ -1,6 +1,6 @@
 # DevTrace development guide (Windows / PowerShell first)
 
-> **Status: Phase 2 of 8 (corpus pipeline code done; corpus fetch awaiting your approval).** This guide documents only what exists today. Sections marked **Planned** are placeholders
+> **Status: Phase 2 of 8 done (corpus fetched and snapshot `976aea99e8507ef2` built; embedding/ingest not yet run on your machine).** This guide documents only what exists today. Sections marked **Planned** are placeholders
 > that each later phase fills in. Commands were verified on Linux (Python 3.11); the Windows/PowerShell variants are
 > written from the same steps but **have not been run on Windows by me**, so tell me about any that fail.
 
@@ -100,7 +100,7 @@ Do not obtain or paste one before then.
 python -m pytest -q
 ```
 - **What it does:** runs ~200 offline tests with in-memory Qdrant/SQLite and fake LLMs. **No network, no API key, no cost.**
-- **Success (as of Phase 2, verified on Linux):** `286 passed, 12 skipped`. The 12 skips are the Neo4j contract tests;
+- **Success (as of Phase 2, verified on Linux):** `288 passed, 12 skipped`. The 12 skips are the Neo4j contract tests;
   they skip unless you set `NEO4J_URI` and `NEO4J_PASSWORD` for a live Neo4j.
 - **Security tests only:** `python -m pytest -q tests/security`
 
@@ -158,7 +158,7 @@ split into section-level chunks with provenance. **Where it comes from:** `data/
 ```powershell
 python -m scripts.fetch_devtrace_corpus --dry-run     # lists the exact URLs; NO network, safe to run any time
 ```
-**The real fetch is not run yet.** After you approve the scope it is:
+**The fetch has been run once (by me, 2026-10-26) and its manifest is committed.** To rebuild it yourself:
 ```powershell
 python -m scripts.fetch_devtrace_corpus               # ~40 HTTPS requests to raw.githubusercontent.com, sequential
 python -m scripts.fetch_devtrace_corpus --verify      # re-checks the snapshot id against data/devtrace/manifest.json
@@ -169,7 +169,7 @@ python -m scripts.ingest_devtrace --snapshot data/devtrace/snapshots/<snapshot_i
 - **Contacts:** only `raw.githubusercontent.com`. **Cost:** none. **Credentials:** none are used or needed.
 - **Ingest** downloads the ~90 MB embedding model from Hugging Face on first use and embeds ~1,000 chunks on CPU (minutes, not hours, on an i3).
 - **Files written:** `data/devtrace/cache/` and `data/devtrace/snapshots/` (git-ignored, rebuildable) and `data/devtrace/manifest.json` (committed: hashes, counts, commit SHAs; no content).
-- **Success:** the fetch prints `snapshot <id>: N files, M chunks`; `--verify` prints `MATCH`.
+- **Success:** the fetch prints `snapshot 976aea99e8507ef2: 38 files, 1103 chunks (24 oversize)`; `--verify` prints `MATCH`. A different id means a source byte or chunking behaviour changed: do not ignore it.
 - **If a fetch fails:** the message gives the URL and HTTP status or error *type* only. Nothing is retried in a loop and nothing is invented; re-run later or tell me.
 
 **Security properties (tested in `tests/unit/test_corpus_fetch.py`):** https only; exact-host allowlist; every redirect re-validated; public IPs only
@@ -209,5 +209,6 @@ optional deployment and cleanup (Phase 8).
 - **Bugs the tests caught while building this:** (1) a chunk file could smuggle its own `tenant_id`; ACL fields are now
   server-owned. (2) Point ids were global, so the same public docs ingested into two tenants overwrote each other; ids are
   now tenant-scoped.
+- **A reproducibility bug I found in my own design:** the first snapshot id hashed only the input bytes and chunker version, so changing the skip list left the id unchanged. It now also hashes the produced chunks, with a regression test.
 - **Version metadata is only what the source states:** release-note sections take version/date from their own heading;
   docs pages are labelled "as of" the pinned release; Pydantic's explicit `version-added` notes are preserved as text.
