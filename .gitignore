@@ -33,3 +33,7 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 .DS_Store
+
+# --- DevTrace derived data (rebuildable from sources.yaml; keep out of git) ---
+data/devtrace/cache/
+data/devtrace/snapshots/

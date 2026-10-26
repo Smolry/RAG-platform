@@ -1,6 +1,6 @@
 # DevTrace development guide (Windows / PowerShell first)
 
-> **Status: Phase 1 of 8.** This guide documents only what exists today. Sections marked **Planned** are placeholders
+> **Status: Phase 2 of 8 (corpus pipeline code done; corpus fetch awaiting your approval).** This guide documents only what exists today. Sections marked **Planned** are placeholders
 > that each later phase fills in. Commands were verified on Linux (Python 3.11); the Windows/PowerShell variants are
 > written from the same steps but **have not been run on Windows by me**, so tell me about any that fail.
 
@@ -54,7 +54,7 @@ Choose **one**:
 **A. Lightweight (enough to run all current tests, no torch/model download, recommended on 8 GB RAM):**
 ```powershell
 Get-Content requirements.txt | Where-Object { $_ -notmatch '^(sentence-transformers|datasets|streamlit)' } | Set-Content req-min.txt
-python -m pip install -r req-min.txt
+python -m pip install -r req-min.txt -c requirements-test.lock   # -c pins the tested versions
 ```
 **B. Full (needed later to run real embeddings, the reranker and the dashboard; several GB of disk):**
 ```powershell
@@ -100,7 +100,7 @@ Do not obtain or paste one before then.
 python -m pytest -q
 ```
 - **What it does:** runs ~200 offline tests with in-memory Qdrant/SQLite and fake LLMs. **No network, no API key, no cost.**
-- **Success (as of Phase 1, verified on Linux):** `191 passed, 12 skipped`. The 12 skips are the Neo4j contract tests;
+- **Success (as of Phase 2, verified on Linux):** `286 passed, 12 skipped`. The 12 skips are the Neo4j contract tests;
   they skip unless you set `NEO4J_URI` and `NEO4J_PASSWORD` for a live Neo4j.
 - **Security tests only:** `python -m pytest -q tests/security`
 
@@ -149,10 +149,37 @@ does not un-leak it, because Git history keeps it). Then ask me; I will not rewr
 | `/ready` returns 503 | Qdrant or the database is unreachable. Start it (section 6) |
 | Port 6333 already in use | Another Qdrant is running: `docker ps` |
 
-## 9. Planned (filled in by later phases)
+## 9. The DevTrace corpus (Phase 2)
 
-Corpus fetching and ingestion (Phase 2) · asking an investigation question and reading citations/traces (Phases 3, 5, 6) ·
-evaluation runs and reading metrics (Phases 4, 7) · optional deployment and cleanup (Phase 8).
+**What it is:** official FastAPI and Pydantic documentation, release notes and migration guides, pinned to exact commits and
+split into section-level chunks with provenance. **Where it comes from:** `data/devtrace/sources.yaml` (explicit file list,
+40-hex commit SHAs). **Licences:** both MIT, see `data/devtrace/NOTICE.md`.
+
+```powershell
+python -m scripts.fetch_devtrace_corpus --dry-run     # lists the exact URLs; NO network, safe to run any time
+```
+**The real fetch is not run yet.** After you approve the scope it is:
+```powershell
+python -m scripts.fetch_devtrace_corpus               # ~40 HTTPS requests to raw.githubusercontent.com, sequential
+python -m scripts.fetch_devtrace_corpus --verify      # re-checks the snapshot id against data/devtrace/manifest.json
+python -m scripts.fetch_devtrace_corpus --no-fetch    # rebuild offline from the local cache
+docker compose up -d                                  # Qdrant
+python -m scripts.ingest_devtrace --snapshot data/devtrace/snapshots/<snapshot_id>
+```
+- **Contacts:** only `raw.githubusercontent.com`. **Cost:** none. **Credentials:** none are used or needed.
+- **Ingest** downloads the ~90 MB embedding model from Hugging Face on first use and embeds ~1,000 chunks on CPU (minutes, not hours, on an i3).
+- **Files written:** `data/devtrace/cache/` and `data/devtrace/snapshots/` (git-ignored, rebuildable) and `data/devtrace/manifest.json` (committed: hashes, counts, commit SHAs; no content).
+- **Success:** the fetch prints `snapshot <id>: N files, M chunks`; `--verify` prints `MATCH`.
+- **If a fetch fails:** the message gives the URL and HTTP status or error *type* only. Nothing is retried in a loop and nothing is invented; re-run later or tell me.
+
+**Security properties (tested in `tests/unit/test_corpus_fetch.py`):** https only; exact-host allowlist; every redirect re-validated; public IPs only
+(loopback/private/link-local/CGNAT/mapped-IPv6 refused); size cap while streaming; text content types and strict UTF-8 only;
+downloaded text is never executed; user queries can never cause a fetch.
+
+## 10. Planned (filled in by later phases)
+
+Asking an investigation question and reading citations/traces (Phases 3, 5, 6) · evaluation runs and metrics (Phases 4, 7) ·
+optional deployment and cleanup (Phase 8).
 
 ---
 
@@ -169,3 +196,18 @@ evaluation runs and reading metrics (Phases 4, 7) · optional deployment and cle
   not shipping a public default.
 - **Alternative rejected:** removing `SYSTEM=baseline` entirely. It is useful for offline experiments, so it is gated
   rather than deleted.
+
+## Phase 2 interview notes
+
+- **Why pin to a commit SHA, not a tag or "latest"?** Tags can be moved and "latest" changes daily; an evaluation is only
+  reproducible if the exact bytes are. The `snapshot_id` hashes those bytes plus the chunker settings.
+- **Why not scrape the docs website?** The sites are built from Markdown in Git. Fetching the source gives heading structure,
+  stable versions and a verifiable provenance URL, with far less parsing and a much smaller attack surface.
+- **Why a custom chunker?** The old word-window chunker could not name the section a passage came from (needed for
+  citations) and could cut code in half. Also, the old default of 500 tokens exceeds all-MiniLM-L6-v2's 256-token input
+  limit, so the tail of every chunk was silently ignored by the embedder. New default: 180 words.
+- **Bugs the tests caught while building this:** (1) a chunk file could smuggle its own `tenant_id`; ACL fields are now
+  server-owned. (2) Point ids were global, so the same public docs ingested into two tenants overwrote each other; ids are
+  now tenant-scoped.
+- **Version metadata is only what the source states:** release-note sections take version/date from their own heading;
+  docs pages are labelled "as of" the pinned release; Pydantic's explicit `version-added` notes are preserved as text.

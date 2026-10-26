@@ -5,7 +5,8 @@ from qdrant_client import QdrantClient, models
 
 from app.core.models import ChunkRecord, RetrievedChunk
 
-KEYWORD_INDEXES = ["tenant_id", "document_id", "allowed_roles", "allowed_users", "classification", "corpus_version"]
+KEYWORD_INDEXES = ["tenant_id", "document_id", "allowed_roles", "allowed_users", "classification", "corpus_version",
+                   "library", "source_type", "snapshot_id"]
 
 
 def make_client(url: str) -> QdrantClient:

@@ -1,0 +1,154 @@
+# DevTrace corpus sources. Pinned to full commit SHAs (tags can move). Explicit file lists: nothing is crawled.
+# Fetched ONLY via app/devtrace/corpus/safe_fetch.py from the host(s) in allowed_hosts. Both sources are MIT-licensed;
+# raw files stay in a git-ignored cache, only this file + manifest.json are committed (see NOTICE.md).
+# 'docs_as_of' pages describe the pinned ref; release-note sections carry their own version/date from the heading.
+# skip_headings: release-note subsections that only list translation/CI/doc-typo PRs. Chosen in phase 2; revisit if eval shows misses.
+allowed_hosts:
+- raw.githubusercontent.com
+sources:
+- id: fastapi
+  library: fastapi
+  display: FastAPI
+  repo: fastapi/fastapi
+  commit: 7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4
+  ref: 0.162.0
+  license: MIT
+  copyright: Copyright (c) 2018 Sebastián Ramírez
+  docs_base_url: https://fastapi.tiangolo.com/
+  files:
+  - path: docs/en/docs/how-to/migrate-from-pydantic-v1-to-pydantic-v2.md
+    url_path: how-to/migrate-from-pydantic-v1-to-pydantic-v2
+    source_type: migration
+  - path: docs/en/docs/tutorial/body.md
+    url_path: tutorial/body
+    source_type: docs
+  - path: docs/en/docs/tutorial/body-fields.md
+    url_path: tutorial/body-fields
+    source_type: docs
+  - path: docs/en/docs/tutorial/body-nested-models.md
+    url_path: tutorial/body-nested-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/body-multiple-params.md
+    url_path: tutorial/body-multiple-params
+    source_type: docs
+  - path: docs/en/docs/tutorial/query-params.md
+    url_path: tutorial/query-params
+    source_type: docs
+  - path: docs/en/docs/tutorial/query-params-str-validations.md
+    url_path: tutorial/query-params-str-validations
+    source_type: docs
+  - path: docs/en/docs/tutorial/path-params.md
+    url_path: tutorial/path-params
+    source_type: docs
+  - path: docs/en/docs/tutorial/path-params-numeric-validations.md
+    url_path: tutorial/path-params-numeric-validations
+    source_type: docs
+  - path: docs/en/docs/tutorial/query-param-models.md
+    url_path: tutorial/query-param-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/header-param-models.md
+    url_path: tutorial/header-param-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/cookie-param-models.md
+    url_path: tutorial/cookie-param-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/request-forms.md
+    url_path: tutorial/request-forms
+    source_type: docs
+  - path: docs/en/docs/tutorial/request-form-models.md
+    url_path: tutorial/request-form-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/response-model.md
+    url_path: tutorial/response-model
+    source_type: docs
+  - path: docs/en/docs/tutorial/extra-models.md
+    url_path: tutorial/extra-models
+    source_type: docs
+  - path: docs/en/docs/tutorial/handling-errors.md
+    url_path: tutorial/handling-errors
+    source_type: docs
+  - path: docs/en/docs/tutorial/schema-extra-example.md
+    url_path: tutorial/schema-extra-example
+    source_type: docs
+  - path: docs/en/docs/tutorial/dependencies/index.md
+    url_path: tutorial/dependencies
+    source_type: docs
+  - path: docs/en/docs/tutorial/response-status-code.md
+    url_path: tutorial/response-status-code
+    source_type: docs
+  - path: docs/en/docs/advanced/settings.md
+    url_path: advanced/settings
+    source_type: docs
+  - path: docs/en/docs/release-notes.md
+    url_path: release-notes
+    source_type: release_notes
+    min_version: 0.100.0
+    stable_only: true
+    title: FastAPI release notes
+    skip_headings: &id001
+    - Internal
+    - Translations
+    - Docs
+    - New Contributors
+- id: pydantic
+  library: pydantic
+  display: Pydantic
+  repo: pydantic/pydantic
+  commit: b2212c787fb5c73386dc770681ec49cd09da8e73
+  ref: 2.14.1
+  license: MIT
+  copyright: Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors
+  docs_base_url: https://docs.pydantic.dev/latest/
+  files:
+  - path: docs/migration.md
+    url_path: migration
+    source_type: migration
+  - path: docs/version-policy.md
+    url_path: version-policy
+    source_type: docs
+  - path: docs/concepts/models.md
+    url_path: concepts/models
+    source_type: docs
+  - path: docs/concepts/validators.md
+    url_path: concepts/validators
+    source_type: docs
+  - path: docs/concepts/fields.md
+    url_path: concepts/fields
+    source_type: docs
+  - path: docs/concepts/config.md
+    url_path: concepts/config
+    source_type: docs
+  - path: docs/concepts/json_schema.md
+    url_path: concepts/json_schema
+    source_type: docs
+  - path: docs/concepts/types.md
+    url_path: concepts/types
+    source_type: docs
+  - path: docs/concepts/unions.md
+    url_path: concepts/unions
+    source_type: docs
+  - path: docs/concepts/serialization.md
+    url_path: concepts/serialization
+    source_type: docs
+  - path: docs/concepts/strict_mode.md
+    url_path: concepts/strict_mode
+    source_type: docs
+  - path: docs/concepts/conversion_table.md
+    url_path: concepts/conversion_table
+    source_type: docs
+  - path: docs/concepts/forward_annotations.md
+    url_path: concepts/forward_annotations
+    source_type: docs
+  - path: docs/errors/validation_errors.md
+    url_path: errors/validation_errors
+    source_type: errors
+  - path: docs/errors/usage_errors.md
+    url_path: errors/usage_errors
+    source_type: errors
+  - path: HISTORY.md
+    url_path: changelog
+    source_type: release_notes
+    min_version: 2.0.0
+    stable_only: true
+    title: Pydantic changelog
+    skip_headings: *id001
